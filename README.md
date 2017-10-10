@@ -7,5 +7,5 @@ Repository for homeworks and project submissions
 | Name 				| Spicer | Email address			 |
 | ------------------|--------| ------------------------- |
 | Mathilde Mareite  | 284507 | mathilde.mareite@epfl.ch  |
-| Thibaut Chamard	| 		 | thibaut.chamard@epfl.ch	 |
-| Noé Gallice		| 		 | noe.gallice@epfl.ch		 |
+| Thibaut Chamard	| 284502 | thibaut.chamard@epfl.ch	 |
+| Noé Gallice		| 227244 | noe.gallice@epfl.ch		 |
