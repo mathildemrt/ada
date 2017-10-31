@@ -19,5 +19,5 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
  - Identificate the important metrics.
  - Differentiate genres and subgenres.
 
-# Questions for TAa
+# Questions for TAs
 How the cluster works? (Tutorial?)
