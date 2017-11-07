@@ -20,4 +20,4 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
  - Differentiate genres and subgenres.
 
 # Questions for TAs
-How the cluster works? (Tutorial?)
+How works the cluster? (Tutorial?)
