@@ -1,5 +1,8 @@
 # 03 - Interactive Viz
 
+## We can see our notebook here:
+[- - - Notebook Viewer - - -](https://nbviewer.jupyter.org/github/mathmout/ada/blob/master/03%20-%20Interactive%20Viz/Homework3-2.ipynb?flush_cache=true)
+
 ## Deadline
 
 Wednesday November 8th, 2017 at 11:59PM
