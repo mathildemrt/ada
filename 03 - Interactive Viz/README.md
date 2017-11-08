@@ -1,7 +1,7 @@
 # 03 - Interactive Viz
 
 ## We can see our notebook here:
-[- - - Notebook Viewer - - -](https://nbviewer.jupyter.org/github/mathmout/ada/blob/master/03%20-%20Interactive%20Viz/Homework3-2.ipynb?flush_cache=true)
+[- - - Notebook Viewer - - -](https://nbviewer.jupyter.org/github/mathmout/ada/blob/master/03%20-%20Interactive%20Viz/Homework3-2.ipynb?flush_cache=false)
 
 ## Deadline
 
