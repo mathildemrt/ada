@@ -39,8 +39,8 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
 # Questions for TAs
 
 For Week 1 and 2:
--How works the cluster, and are there other detailed *Tutorials* than the one you already gave us?
--How to handle such a big database without getting a `Memory Error` with python?
+- How works the cluster, and are there other detailed *Tutorials* than the one you already gave us?
+- How to handle such a big database without getting a `Memory Error` with python?
 
 For Week 4:
 - Is there a common way to represent the result of a classifictation with many feature? Do you have some advice do that?  
