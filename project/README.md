@@ -20,4 +20,7 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
  - Differentiate genres and subgenres.
 
 # Questions for TAs
-How works the cluster? (Tutorial?)
+-How works the cluster, and are there other detailed *Tutorials* than the one you already gave us?
+-How to handle such a big database without getting a `Memory Error` with python?
+
+
