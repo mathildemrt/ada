@@ -18,6 +18,24 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
  - Access to the database from the cluster.
  - Identificate the important metrics.
  - Differentiate genres and subgenres.
+ 
+ ### Week 1 (7 Nov)
+
+- Access to the database from the cluster.
+- Start to Identificate the important metrics.
+- Differentiate genres and subgenres.
+
+### Week 2 (14 Nov)
+
+-Create our dataframe with the identified metric
+
+### Week 3 (21 Nov)
+
+-Start the genre classification (supervised machine learning)
+
+
+### Week 4 (28 Nov)
+
 
 # Questions for TAs
 -How works the cluster, and are there other detailed *Tutorials* than the one you already gave us?
