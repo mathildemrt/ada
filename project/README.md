@@ -15,10 +15,7 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
 
 
 # A list of internal milestones up until project milestone 2
- - Access to the database from the cluster.
- - Identificate the important metrics.
- - Differentiate genres and subgenres.
- 
+
  ### Week 1 (7 Nov)
 
 - Access to the database from the cluster.
@@ -27,18 +24,25 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
 
 ### Week 2 (14 Nov)
 
--Create our dataframe with the identified metric
+- Create our dataframe with the identified metric.
 
 ### Week 3 (21 Nov)
 
--Start the genre classification (supervised machine learning)
-
+- Start the *music genre* classification (supervised learning)
 
 ### Week 4 (28 Nov)
 
+- Analyze the most prolific types of music over the time 
+- Analyze the data, find a way to represent the important feature of each *music genre* and visualize the difference between the different *music type*
+
 
 # Questions for TAs
+
+For Week 1 and 2:
 -How works the cluster, and are there other detailed *Tutorials* than the one you already gave us?
 -How to handle such a big database without getting a `Memory Error` with python?
+
+For Week 4:
+- Is there a common way to represent the result of a classifictation with many feature? Do you have some advice do that?  
 
 
