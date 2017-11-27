@@ -7,7 +7,7 @@ Our goal is to draw an identikit-picture of the different music genres and subge
 
 # Research questions
  - What define a musical genre?
- - What is the leading type of music over the time?
+ - What is the leading type of music over time?
  - How evoled a musical genre?
 
 # Dataset
@@ -34,6 +34,20 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
 
 - Analyze the most prolific types of music over the time 
 - Analyze the data, find a way to represent the important feature of each *music genre* and visualize the difference between the different *music type*
+
+# Milestone 3
+During this milestone we will focus our work on 2 tasks:
+- prepare great visualizations
+- scale our analysis to the entire dataset
+
+### Visualization
+#### Music genre analysis
+- Display what define a music genre
+- Draw robot portraits of musical genres
+#### Music genre evolution over time and location
+- Display a music genre propagation over time on an interactive map
+- Display the music genres production over time
+
 
 
 # Questions for TAs
