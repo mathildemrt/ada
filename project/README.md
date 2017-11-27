@@ -18,22 +18,22 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
 
  ### Week 1 (7 Nov)
 
-- Access to the database from the cluster.
-- Start to Identificate the important metrics.
-- Differentiate genres and subgenres.
+- [ ] Access to the database from the cluster.
+- [x] Start to Identificate the important metrics.
+- [ ] Differentiate genres and subgenres.
 
 ### Week 2 (14 Nov)
 
-- Create our dataframe with the identified metric.
+- [x] Create our dataframe with the identified metric.
 
 ### Week 3 (21 Nov)
 
-- Start the *music genre* classification (supervised learning)
+- [ ] Start the *music genre* classification (supervised learning)
 
 ### Week 4 (28 Nov)
 
-- Analyze the most prolific types of music over the time 
-- Analyze the data, find a way to represent the important feature of each *music genre* and visualize the difference between the different *music type*
+- [x] Analyze the most prolific types of music over the time 
+- [x] Analyze the data, find a way to represent the important feature of each *music genre* and visualize the difference between the different *music type*
 
 # Milestone 3
 During this milestone we will focus our work on 2 tasks:
