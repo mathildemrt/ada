@@ -56,10 +56,16 @@ During this milestone we will focus our work on 3 tasks:
 - create a data story
 
 #### Week 5 ( 5 Dec)
+- Create our dataframe with the entire dataset
+- Start Visualisation function on the subset
 
 #### Week 6 ( 12 Dec) 
+- Finish the visualizations
+- Do the analysis
+- Start the data story
 
 #### Week 7 ( 19 Dec) 
+- Finish the data story
 
 
 ## Visualizations
