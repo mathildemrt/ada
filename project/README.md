@@ -2,7 +2,7 @@
 
 ***"When the words fail, music speaks"**, Hans Christian Andersen*
 
-# Abstract
+## Abstract
 
 Our goal was originally to draw an identikit-picture of the different music genres and subgenres. The [Million song](https://labrosa.ee.columbia.edu/millionsong/) dataset provides several criteria like the duration, danceability, loudness, etc... We also wanted to analyze the most prolific types of music over the time and understand their evolution.
 
@@ -10,54 +10,60 @@ Since Milestone 1, our idea has evolved. A closer look at the dataset revealed t
 
 The original idea of drawing the portrait of a genre has not been completly dropped but it has became a secondary concern. After having analysed the evolution of genre we will try to find if there is a correlation between the genre and the hotesness or familiarity of the artist.
 
-# Research questions
+## Dataset
+We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) dataset. This dataset provides several tags per song whose help us to classify the songs per musical type. The data are available on h5 files and a python [library](https://github.com/tbertinmahieux/MSongsDB/tree/master/PythonSrc) exists to manage them. The data set is pretty huge and we don't know how to work with a cluster so we are looking forward to hearing more about it. [Million song](https://labrosa.ee.columbia.edu/millionsong/) provides some extra datasets whose could help us to enrich our analysis.
 
-## Milestone 1 
+## Research questions
+
+### Milestone 1 
  - What define a musical genre?
  - What is the leading type of music over time?
  - How evoled a musical genre?
  
-## Milestone 2
+### Milestone 2
 - How music genre has evolved over time and location?
 - Find for each genre, where and when did it first appeared ?
 - Which genre is the most prolific genre ? e.g.: What was the most prolific genre of music in Texas in the 20's?
 - Is there a link between a genre and the hotesness and the popularity of an artist?
 
-# Dataset
-We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) dataset. This dataset provides several tags per song whose help us to classify the songs per musical type. The data are available on h5 files and a python [library](https://github.com/tbertinmahieux/MSongsDB/tree/master/PythonSrc) exists to manage them. The data set is pretty huge and we don't know how to work with a cluster so we are looking forward to hearing more about it. [Million song](https://labrosa.ee.columbia.edu/millionsong/) provides some extra datasets whose could help us to enrich our analysis.
 
+### A list of internal milestones up until project milestone 2
 
-# A list of internal milestones up until project milestone 2
-
- ### Week 1 (7 Nov)
+ #### Week 1 (7 Nov)
 
 - [ ] Access to the database from the cluster.
 - [x] Start to Identificate the important metrics.
 - [x] Differentiate genres and subgenres.
 
-### Week 2 (14 Nov)
+#### Week 2 (14 Nov)
 
 - [x] Create our dataframe with the identified metric.
 
-### Week 3 (21 Nov)
+#### Week 3 (21 Nov)
 
 - [x] Start the *music genre* classification
 
-### Week 4 (28 Nov)
+#### Week 4 (28 Nov)
 
 - [x] Analyze the most prolific types of music over the time 
 - [x] Analyze the data, find a way to represent the important feature of each *music genre* and visualize the difference between the different *music type*
 
-# A list of internal milestones up until project milestone 3
+### A list of internal milestones up until project milestone 3
 
-
-# Milestone 3
-
-During this milestone we will focus our work on 2 tasks:
+During this milestone we will focus our work on 3 tasks:
 - prepare great visualizations
 - scale our analysis to the entire dataset
+- create a data story
 
-### Visualization
+#### Week 5 ( 5 Dec)
+
+#### Week 6 ( 12 Dec) 
+
+#### Week 7 ( 19 Dec) 
+
+
+## Visualizations
+
 #### Music genre analysis
 - Display what define a music genre
 - Draw robot portraits of musical genres
@@ -67,7 +73,7 @@ During this milestone we will focus our work on 2 tasks:
 
 
 
-# Questions for TAs
+## Questions for TAs
 
 For Week 1 and 2:
 - How works the cluster, and are there other detailed *Tutorials* than the one you already gave us?
