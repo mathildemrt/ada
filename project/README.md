@@ -4,9 +4,9 @@
 
 ## Abstract
 
-Our goal was originally to draw an identikit-picture of the different music genres and subgenres. The [Million song](https://labrosa.ee.columbia.edu/millionsong/) dataset provides several criteria like the duration, danceability, loudness, etc... We also wanted to analyze the most prolific types of music over the time and understand their evolution.
+Our goal was originally to draw an identikit-picture of the different music genres and subgenres. The [Million song](https://labrosa.ee.columbia.edu/millionsong/) dataset provides several criteria like the duration, danceability, loudness, etc... We also wanted to analyze the most prolific types of music over time and understand their evolution.
 
-Since Milestone 1, our idea has evolved. A closer look at the dataset revealed that some information that we wanted to be part of our identikit, such as the energy and the danceability, was missing for a lot of songs in the dataset. Conversely, the location of the song and the date are well defined so we decided to make full use of this information. The goal now, would be to analyse the music genre evolution both geographically and over the time. The idea is to show the most popular genre in a certain region at a given year.
+Since Milestone 1, our idea has evolved. A closer look at the dataset revealed that some information that we wanted to be part of our identikit, such as the energy and the danceability, was missing for a lot of songs in the dataset. Conversely, the location of the song and the date are well defined so we decided to make full use of this information. The goal now, would be to analyse the music genre evolution both geographically and over time. The idea is to show the most popular genre in a certain region at a given year.
 
 The original idea of drawing the portrait of a genre has not been completly dropped but it has became a secondary concern. After having analysed the evolution of genre we will try to find if there is a correlation between the genre and the hotesness or familiarity of the artist.
 
@@ -45,7 +45,7 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
 
 #### Week 4 (28 Nov)
 
-- [x] Analyze the most prolific types of music over the time 
+- [x] Analyze the most prolific types of music over time 
 - [x] Analyze the data, find a way to represent the important feature of each *music genre* and visualize the difference between the different *music type*
 
 ### A list of internal milestones up until project milestone 3
