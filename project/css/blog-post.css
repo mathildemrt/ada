@@ -5,11 +5,20 @@
  */
 
 body {
-  padding-top: 54px;
+    padding-top: 54px;
+    font-family: 'BioRhyme', serif;
+/*    font-family: 'BioRhyme Expanded', serif;
+    font-family: 'Space Mono', monospace;*/
 }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
+.title{
+    font-family: 'BioRhyme', serif;
 }
+.subtitle{
+   font-family: 'Space Mono', monospace;
+    color:"#AAA";
+    font-size:0.7em;
+    font-style: italic;
+}
+
+
