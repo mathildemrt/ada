@@ -2,9 +2,10 @@
 
 ***"When the words fail, music speaks"**, Hans Christian Andersen*
 
+## Links
+* [Data Story](https://mathmout.github.io/ada/project/)
+* [Notebook viewer](https://nbviewer.jupyter.org/github/mathmout/ada/blob/master/project/project.ipynb?flush_cache=true)
 
-## Notebook viewer
-[- - - link - - -](https://nbviewer.jupyter.org/github/mathmout/ada/blob/master/project/project.ipynb?flush_cache=true)
 ## Abstract
 
 Our goal was originally to draw an identikit-picture of the different music genres and subgenres. The [Million song](https://labrosa.ee.columbia.edu/millionsong/) dataset provides several criteria like the duration, danceability, loudness, etc... We also wanted to analyze the most prolific types of music over time and understand their evolution.
