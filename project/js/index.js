@@ -3,6 +3,19 @@ function udpateHeatMap(e){
     document.getElementById('heatmap').src = "fig/heatmaps/" + genre + ".html";
 }
 
+function updateFeature(e) {
+    var i;
+    var feature = e.options[e.selectedIndex].value;
+    var allGraphs = document.getElementsByClassName('bokeh-plot');
+    for (i = 0; i < allGraphs.length; i++) {
+        allGraphs[i].style.display = 'none';
+    }
+    var featureGraphs = document.getElementsByClassName(feature);
+    for (i = 0; i < featureGraphs.length; i++) {
+        featureGraphs[i].style.display = 'inline';
+    }
+}
+
 
 (function() {
   var fn = function() {
