@@ -91,9 +91,3 @@ layout = row(controls, create_figure())
 curdoc().add_root(layout)
 curdoc().title = "Hottness_familiarity"
 
-p=create_figure()
-from bokeh.embed import components
-script, div = components(p)
-script = '\n'.join(['#+HTML_HEAD_EXTRA: ' + line for line in script.split('\n')])
-
-print('{script} #+BEGIN_HTML <a name="figure"></a> {div}#+END_HTML'.format(script=script, div=div))

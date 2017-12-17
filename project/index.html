@@ -137,7 +137,7 @@
                   <option value="tempo">Tempo</option>
                   <option value="artist_hotttnesss">Artist hotttnesss</option>
                   <option value="artist_familiarity">Artist familiarity</option>
-                  <option value="genree">Genre</option>
+                  <option value="genre">Genre</option>
 
                 </select>
 
@@ -175,7 +175,7 @@
                         <div class="bk-plotdiv" id="0d21410b-56e0-45bf-89b6-145f9feeb84e"></div>
                     </div>
 
-                    <div class="genree bokeh-plot" style="display:none">
+                    <div class="genre bokeh-plot" style="display:none">
                         <div class="bk-plotdiv" id="bfee38ca-c6e0-49a2-985e-c7a5d1dedc99"></div>
                         <div class="bk-plotdiv" id="b65478c8-6c1c-434e-ab93-f34810d8f691"></div>
                         <div class="bk-plotdiv" id="b529ee48-2248-4c9a-b2e7-c4ec3267f1b6"></div>
@@ -185,6 +185,88 @@
                     <hr>
                 </div>
 
+
+              <hr>
+              <p>Artist familiarity and hotttnesss</p>
+                <select id="fgenre" onchange="updateFgenre(this);" value="Genre : ">
+                  <option value="all" selected>All</option>
+                  <option value="blues">Blues</option>
+                  <option value="country">Country</option>
+                  <option value="electronica">Electronica</option>
+                  <option value="folk">Folk</option>
+                  <option value="hiphop">Hip-Hop</option>
+                  <option value="jazz">Jazz</option>
+                  <option value="metal">Metal</option>
+                  <option value="orchestral">Orchestral</option>
+                  <option value="pop">Pop</option>
+                  <option value="raggae">Reggae</option>
+                  <option value="rock">Rock</option>
+                  <option value="world">World</option>
+
+                </select>
+
+                <br><br>
+
+                <div class="bk-root" style="height:auto">
+                  <div class="all bokeh-plottt">
+                  <div class="bk-plotdiv" id="fd310789-252a-407b-b262-11b0833a93de"></div>
+                  <div class="bk-plotdiv" id="93575cbf-9ae2-4ad9-86f8-3ee8bee57c32"></div>
+                  <div class="bk-plotdiv" id="9b54610c-40af-4920-8b9a-8e7520a40614"></div>
+                  <div class="bk-plotdiv" id="3481c875-fa36-42d8-9d43-6008d6ebbcde"></div>
+
+                  </div>
+
+                  <div class="blues bokeh-plottt" style="display:none">
+
+                      <div class="bk-plotdiv" id="9cadc252-a167-4f90-9911-9102ee818321"></div>
+                      </div>
+
+                    <div class="country bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="1bf05ff7-9f2f-4a1a-8b6a-bb4ebb44769d"></div>
+                  </div>
+
+                  <div class="electronica bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="7394a641-c4f8-4878-bf34-cb35f52fd08f"></div>
+                  </div>
+
+                    <div class="folk bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="7a31a50a-14f6-47b9-b32a-89603f29b934"></div>
+                  </div>
+
+                  <div class="hiphop bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="c895b134-6e46-4185-a659-2a78a4b3a5cd"></div>
+                  </div>
+
+                    <div class="jazz bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="1bcd8049-6f2c-4803-b61b-dcf4341bb008"></div>
+                  </div>
+
+                  <div class="metal bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="3bbbea75-5eff-4101-955d-0b48f70d09d6"></div>
+                  </div>
+
+                  <div class="orchestral bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="d2dd93a7-e9e1-4598-bdcd-f046f5d5f1ee"></div>
+                  </div>
+
+                  <div class="pop bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="9ad3c598-f2c6-4d09-b291-a82fb2b17539"></div>
+                  </div>
+
+                    <div class="raggae bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="7cd4c4dd-9fbb-4d52-8174-934184811a47"></div>
+                  </div>
+
+                  <div class="rock bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="92d5f11a-a2b5-4425-8c56-8e03be537b40"></div>
+                  </div>
+
+                    <div class="world bokeh-plottt" style="display:none">
+                  <div class="bk-plotdiv" id="ac866803-ea11-4757-9b20-5066a448b5b0"></div>
+                  </div>
+                </div>
+
+                <hr>
 
                 <!-- Post Content -->
                 <p class="lead">Introduction</p>
@@ -213,7 +295,7 @@
                   <option value="metal">Metal</option>
                   <option value="orchestral">Orchestral</option>
                   <option value="pop">Pop</option>
-                  <option value="raggae">Raggae</option>
+                  <option value="raggae">Reggae</option>
                   <option value="rock">Rock</option>
                   <option value="world">World</option>
                 </select>

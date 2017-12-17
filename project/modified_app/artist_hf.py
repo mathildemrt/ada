@@ -14,6 +14,7 @@ from bokeh.plotting import curdoc, figure
 from bokeh.client import push_session
 from bokeh.layouts import layout, widgetbox
 from bokeh.charts import Donut
+from bokeh.embed import components
 
 f = open('dataframe-final', 'rb')
 df = pickle.load(f)
@@ -63,6 +64,8 @@ def update(attr, old, new):
     p,q= create_figure()
     layout.children[1] = p
     layout.children[2] = q
+
+
     
 genre_s = Select(title="Genre:", value="all", options=genre_list)
 genre_s.on_change('value', update)
@@ -70,7 +73,7 @@ genre_s.on_change('value', update)
 genre_d = Select(title="If Genre is all, pie chart of songs:", value="all", options=["all", "between the limit","upward outlier","downward outliers"])
 genre_d.on_change('value', update)
 
-var_slider = Slider(start=0.04, end=0.2, value=0.1, step=.02, title="Outlier limit")
+var_slider = Slider(start=0.04, end=0.2, value=0.14, step=.02, title="Outlier limit")
 var_slider.on_change('value', update)
 
 checkbox_group = CheckboxGroup(labels=["Show regression line","Show outlier limits"], active=[0,1])
@@ -80,7 +83,7 @@ checkbox_group.on_change('active', update)
 #checkbox_year.on_change('active', update)
 
 
-year_slider = RangeSlider(start=1940, end=2010, value=(1940,2000), step=10, title="year")
+year_slider = RangeSlider(start=1940, end=2011, value=(1940,2011), step=10, title="year")
 year_slider.on_change('value', update)
 
 
@@ -117,7 +120,8 @@ def create_figure():
         n_out=len(data[data['outlier']!=0])
         corr=np.corrcoef(x=data.artist_familiarity, y=data.artist_hotttnesss)
         corr=corr[0,1]
-        title='correlation = {:.2f}   ;  #outliers={}'.format(corr,n_out)
+        title='correlation = {:.2f}   ;  #outliers/#total={}/{}'.format(corr,n_out,len(data))
+
         p = figure(plot_height=400, plot_width=400,title=title,tools=[hover,'box_zoom','wheel_zoom'])
         p.xaxis.axis_label = "Artist familiarity"
         p.yaxis.axis_label = "Artist hotttnesss"
@@ -180,11 +184,31 @@ def create_figure():
                 q = Donut(count,label='index',color=colors, height=400, width=400,hover_text='#songs')
                 q.title.text = "#Artists = {}".format(len(data))
 
+            count = data_high.genre.value_counts()
 
-    return p,q
+            colors = [genre_color[x] for x in count.index.sort_values()]
+
+            q1 = Donut(count, label='index', color=colors, height=400, width=400, hover_text='#songs')
+            q1.title.text = " #upper_outliers = {}".format(len(data_high))
+
+            count = data_low.genre.value_counts()
+
+            colors = [genre_color[x] for x in count.index.sort_values()]
+
+            q2 = Donut(count, label='index', color=colors, height=400, width=400, hover_text='#songs')
+            q2.title.text = " #lower_outliers = {}".format(len(data_low))
+
+            count = data.genre.value_counts()
+
+            colors = [genre_color[x] for x in count.index.sort_values()]
+
+            q3 = Donut(count, label='index', color=colors, height=400, width=400, hover_text='#songs')
+            q3.title.text = " #total_Artists = {}".format(len(data))
 
 
 
+
+    return p,q,q1,q2,q3
 
 
 
@@ -198,11 +222,17 @@ def create_figure():
 controls = widgetbox([genre_s,year_slider,var_slider,checkbox_group,genre_d], width=200)
 
 #layout =row(controls, create_figure())
-a,b=create_figure()
+a,b,c,d,e=create_figure()
 layout =row(controls, a,b)
 
 
 
 curdoc().add_root(layout)
 curdoc().title = "Hottness_familiarity"
+
+plots = {'3':d,'4': e}
+
+script, div = components(plots)
+print(script)
+print(div)
 
