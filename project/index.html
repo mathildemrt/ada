@@ -18,18 +18,16 @@
     <!-- Custom styles for this template -->
     <link href="css/blog-post.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.css" type="text/css" />
-    <link href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.css" rel="stylesheet" type="text/css">
-    <link href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.10.min.css" rel="stylesheet" type="text/css">
-    <link href="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.10.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css" />
+    <link href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.css" rel="stylesheet" type="text/css">
 
-    <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.js"></script>
-    <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.10.min.js"></script>
-    <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.10.min.js"></script>
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.js"></script>
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.js"></script>
 
-    <script src="js/index.js"></script>
-
-
+      <script src="js/index.js"></script>
 
   </head>
 
@@ -129,82 +127,90 @@
         </div>
         <div class="row">
 
-            <!-- Header -->
             <div class="col-lg-12">
-            <hr>
+                <hr>
+
+                <select id="feature" onchange="updateFeature(this);" value="Feature : ">
+                  <option value="year" selected>Year</option>
+                  <option value="duration">Duration</option>
+                  <option value="loudness">Loudness</option>
+                </select>
+
+                <br><br>
+
+                <div class="bk-root" style="height:auto">
+                    <div class="year bokeh-plot">
+                        <div class="bk-plotdiv" id="0cc75d9d-53cc-4307-961f-753042617227"></div>
+                        <div class="bk-plotdiv" id="6eee9180-347d-4a4c-a49c-40b5a02f428d"></div>
+                    </div>
+
+                    <div class="duration bokeh-plot" style="display:none">
+                        <div class="bk-plotdiv duration" id="883d6329-d94a-4283-9293-6e849e9740c2"></div>
+                        <div class="bk-plotdiv duration" id="4619d2c8-977c-4798-be36-6fd335aea5ce"></div>
+                    </div>
+
+                    <div class="loudness bokeh-plot" style="display:none">
+                        <div class="bk-plotdiv loudness" id="ead5d40d-4984-4cd9-8ab7-ce4ad6b98af9"></div>
+                        <div class="bk-plotdiv loudness" id="ecf34c39-d7b2-41d4-a717-972b0c17225c"></div>
+                    </div>
+                    <hr>
+                </div>
+
+
+                <!-- Post Content -->
+                <p class="lead">Introduction</p>
+
+                <p>Million song dataset description</p>
+                <img class="img-fluid" src="img/legend.png" alt="legend" />
+                <img class="img-fluid rounded" src="img/genredistribution.png" alt="distribution" align="center"/>
+
+                <hr>
+                <p>Evolution of music genre over time</p>
+                <img class="img-fluid" src="img/year.png" alt="evolution of music genre over time" />
+                <p>Certain genre raggae pas tres a la mode. Selon les annees. </p>
+
+
+                <hr>
+                <p>Heatmap</p>
+
+
+                <select id="genre" onchange="udpateHeatMap(this);" value="Genre : ">
+                  <option value="blues" selected>Blues</option>
+                  <option value="country">Country</option>
+                  <option value="electronica">Electronica</option>
+                  <option value="folk">Folk</option>
+                  <option value="hiphop">Hip-Hop</option>
+                  <option value="jazz">Jazz</option>
+                  <option value="metal">Metal</option>
+                  <option value="orchestral">Orchestral</option>
+                  <option value="pop">Pop</option>
+                  <option value="raggae">Raggae</option>
+                  <option value="rock">Rock</option>
+                  <option value="world">World</option>
+                </select>
+                <br><br>
+
+                <iframe class="col-sm-12" id="heatmap" style="height:40em" width=100% height=100%  src="fig/heatmaps/blues.html" frameborder="0" allowfullscreen scrolling="no">
+                        Your browser does not support inline frames.
+                </iframe>
+
+
+                <hr>
+                <blockquote class="blockquote">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <footer class="blockquote-footer">Someone famous in
+                      <cite title="Source Title">Source Title</cite>
+                    </footer>
+                </blockquote>
 
 
 
-
-            <div class="bk-root">
-               <div class="bk-plotdiv" id="0cc75d9d-53cc-4307-961f-753042617227"></div>
-               <div class="bk-plotdiv" id="6eee9180-347d-4a4c-a49c-40b5a02f428d"></div>
-
-              <div class="bk-plotdiv" id="883d6329-d94a-4283-9293-6e849e9740c2"></div>
-              <div class="bk-plotdiv" id="4619d2c8-977c-4798-be36-6fd335aea5ce"></div>
-
-              <div class="bk-plotdiv" id="ead5d40d-4984-4cd9-8ab7-ce4ad6b98af9"></div>
-              <div class="bk-plotdiv" id="ecf34c39-d7b2-41d4-a717-972b0c17225c"></div>
-
-
-
-            <!-- Post Content -->
-            <p class="lead">Introduction</p>
-
-            <p>Million song dataset description</p>
-            <img class="img-fluid" src="img/legend.png" alt="legend" />
-            <img class="img-fluid rounded" src="img/genredistribution.png" alt="distribution" align="center"/>
-
-
-            <p>Evolution of music genre over time</p>
-            <img class="img-fluid" src="img/year.png" alt="evolution of music genre over time" />
-            <p>Certain genre raggae pas tres a la mode. Selon les annees. </p>
-
-
-            <p>Heatmap</p>
-
-
-            <select id="genre" onchange="udpateHeatMap(this);">
-              <option value="blues" selected>Blues</option>
-              <option value="country">Country</option>
-              <option value="electronica">Electronica</option>
-              <option value="folk">Folk</option>
-              <option value="hiphop">Hip-Hop</option>
-              <option value="jazz">Jazz</option>
-              <option value="metal">Metal</option>
-              <option value="orchestral">Orchestral</option>
-              <option value="pop">Pop</option>
-              <option value="raggae">Raggae</option>
-              <option value="rock">Rock</option>
-              <option value="world">World</option>
-            </select>
-            <br><br>
-            <iframe class="col-sm-12" id="heatmap" style="height:40em" width=100% height=100%  src="fig/heatmaps/blues.html" frameborder="0" allowfullscreen scrolling="no">
-                    Your browser does not support inline frames.
-            </iframe>
-
-            <div class="embed-responsive embed-responsive-21by9">
-              <object class="embed-responsive-item" type="text/html" data="https://demo.bokehplots.com/apps/sliders" allowfullscreen></object>
+                <p>Conclusion</p>
             </div>
+            <!-- /.col -->
 
-
-          <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <footer class="blockquote-footer">Someone famous in
-              <cite title="Source Title">Source Title</cite>
-            </footer>
-          </blockquote>
-
-
-
-          <p>Conclusion</p>
-            </div>
         </div>
-
-
-
-      </div>
-      <!-- /.row -->
+        <!-- /.row -->
 
     </div>
     <!-- /.container -->
