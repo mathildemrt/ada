@@ -76,7 +76,7 @@ genre_d.on_change('value', update)
 var_slider = Slider(start=0.04, end=0.2, value=0.14, step=.02, title="Outlier limit")
 var_slider.on_change('value', update)
 
-checkbox_group = CheckboxGroup(labels=["Show regression line","Show outlier limits"], active=[0,1])
+checkbox_group = CheckboxGroup(labels=["Show regression line","Show outlier limits"], active=[0])
 checkbox_group.on_change('active', update)
 
 #checkbox_year = CheckboxGroup(labels=["Show songs with missing year"], active=[])
@@ -120,9 +120,9 @@ def create_figure():
         n_out=len(data[data['outlier']!=0])
         corr=np.corrcoef(x=data.artist_familiarity, y=data.artist_hotttnesss)
         corr=corr[0,1]
-        title='correlation = {:.2f}   ;  #outliers/#total={}/{}'.format(corr,n_out,len(data))
+        title='correlation = {:.2f} '.format(corr)
 
-        p = figure(plot_height=400, plot_width=400,title=title,tools=[hover,'box_zoom','wheel_zoom'])
+        p = figure(plot_height=400, plot_width=400,title=title,tools=[hover,'box_zoom','wheel_zoom','pan'])
         p.xaxis.axis_label = "Artist familiarity"
         p.yaxis.axis_label = "Artist hotttnesss"
         p.circle(x=data.artist_familiarity, y=data.artist_hotttnesss,source=source, color=data.color, line_color="White", alpha=0.6,
@@ -181,7 +181,7 @@ def create_figure():
                 colors = [genre_color[x] for x in count.index.sort_values()]
 
 
-                q = Donut(count,label='index',color=colors, height=400, width=400,hover_text='#songs')
+                q = Donut(count,label='index',color=colors, height=400, width=400,hover_text='#Artists')
                 q.title.text = "#Artists = {}".format(len(data))
 
             count = data_high.genre.value_counts()
@@ -208,7 +208,7 @@ def create_figure():
 
 
 
-    return p,q,q1,q2,q3
+    return p,q
 
 
 
@@ -222,7 +222,7 @@ def create_figure():
 controls = widgetbox([genre_s,year_slider,var_slider,checkbox_group,genre_d], width=200)
 
 #layout =row(controls, create_figure())
-a,b,c,d,e=create_figure()
+a,b=create_figure()
 layout =row(controls, a,b)
 
 
@@ -230,9 +230,12 @@ layout =row(controls, a,b)
 curdoc().add_root(layout)
 curdoc().title = "Hottness_familiarity"
 
-plots = {'3':d,'4': e}
+plots = {'1':a,'2': b}
 
 script, div = components(plots)
-print(script)
-print(div)
 
+file = open("testfile.txt", "w")
+
+file.write(script)
+
+print(div)
