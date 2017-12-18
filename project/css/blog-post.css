@@ -20,9 +20,21 @@ body {
     font-size:0.7em;
     font-style: italic;
 }
+
 .center-plot{
   height:auto !important;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+p{
+    text-align: justify;
+    font-size  : 14px;
+}
+
+.bk-toolbar-wrapper{
+    width:auto;
+    height:auto;
+    margin :0;
 }

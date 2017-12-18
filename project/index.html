@@ -3,34 +3,32 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>ADA Project - Evolution of music genre</title>
+    <title>ADA Project - Evolution of music genre</title>
 
-  <!-- favicon-->
-  <link rel="icon" href="img/favicon.ico" />
+    <!-- favicon-->
+    <link rel="icon" href="img/favicon.ico" />
 
-  <link href="https://fonts.googleapis.com/css?family=BioRhyme:300|BioRhyme+Expanded|Space+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme:300|BioRhyme+Expanded|Space+Mono" rel="stylesheet">
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="css/blog-post.css" rel="stylesheet">
+    <link rel="SCReet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css" />
+    <link href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.css" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css" />
-  <link href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" rel="stylesheet" type="text/css">
-  <link href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.css" rel="stylesheet" type="text/css">
-  <link href="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.js"></script>
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.js"></script>
 
-  <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
-  <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.js"></script>
-  <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.js"></script>
-
-  <script src="js/index.js"></script>
+    <link href="css/blog-post.css" rel="stylesheet">
+    <script src="js/index.js"></script>
 
 </head>
 
@@ -131,7 +129,30 @@
     <div class="row">
 
       <div class="col-lg-12">
+    
+        <hr>
+        <!-- Post Content -->
+        <p class="lead">Million Song Dataset (MSD), a famous dataset with freely available collection of audio features and metadata for a million contemporary popular music tracks.</p>
 
+        <p>There are many attractive features in the MSD. Here, what we want to focus are the year, location and genre of a song. Based on these features, for each year, we define the most prolific types of music over time and understand their evolution.
+        The purpose of this project in Robert West's <em>CS-401 Applied Data Analysis (ADA)</em> class of Fall 2017 at EPFL is to show the evolution of the music genres over time and space.</p>
+
+        <p>A subset of 10.000 songs from the dataset we used for this project is avalaible for download <a href="https://labrosa.ee.columbia.edu/millionsong/pages/getting-dataset">here</a>.</p>
+
+          
+        <br><br>
+        <h2>Dataset description</h2>
+
+        <p>The songs here are mostly ranging from 1920 to 2010, with a peak in the year 2000s.</p>
+        <p>The entire dataset is 280GB, so we used the cluster to work on it. The MSD contains some Additional files which provide us with all the different tags that could define a song.</p>
+        <p>For instance the song xxx has the following tags :</p>
+        <video src="" ></video>
+        <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to define what is a genre and a subgenre. And try to macth all those tags to a genre. And it's not a easy task to classify music genre and classify certain song.</p>
+
+        <br><br>
+        <img class="img-fluid rounded" src="img/yeardistribution.png" alt="Year distribution"/>
+        <p>We notice that the number of the songs starts to increase significantly in the 1980s, likely coinciding with the invention of the CD. CD sales began declining in 2000 due to the increasing popularity of a new digital format known as the MP3.</p>
+                    
         <div class="bk-root center-plot">
           <div class="bk-plotdiv" id="bd8ed138-7ee1-4238-9277-57d0e033f432"></div>
         </div>
@@ -142,18 +163,69 @@
         </div>
 
 
+        <br><br>
+        <h2>Find the genre of a song</h2>
+        <p>Since our general task is to model the genre of a the songs, we decided to classify every music under one of those genre :</p>
+          <ul>
+            <li>Blues</li>
+            <li>Country</li>
+            <li>Electronic</li>
+            <li>Folk</li>
+            <li>Jazz</li>
+            <li>Pop</li>
+            <li>Metal</li>
+            <li>Rock</li>
+            <li>Orchestral</li>
+            <li>Hip-Hop</li>
+            <li>Raggae</li>
+            <li>World</li>
+          </ul>
+
+        <img class="img-fluid" src="img/legend.png" alt="legend" />
+
         <hr>
+        <h2>Evolution of music genre over time</h2>
+        <img class="img-fluid" src="img/year.png" alt="evolution of music genre over time" />
+        <p>The graph below shows the evolution and development of certain music genre over time. It states that Jazz and Blues are loosing popularity over time wheras electronic music which was completly new in the 1980's is becoming more and more popular. We can clearly see the creation of metal music in  the early 1970s</p>
 
+
+        <hr>
+        <h2>Evolution of music genre over time and space</h2>
+        <p>Show the most popular genre in a certain region at a given year.</p>
+
+
+        <select id="genre" onchange="udpateHeatMap(this);" value="Genre : ">
+          <option value="blues" selected>Blues</option>
+          <option value="country">Country</option>
+          <option value="electronica">Electronica</option>
+          <option value="folk">Folk</option>
+          <option value="hiphop">Hip-Hop</option>
+          <option value="jazz">Jazz</option>
+          <option value="metal">Metal</option>
+          <option value="orchestral">Orchestral</option>
+          <option value="pop">Pop</option>
+          <option value="raggae">Raggae</option>
+          <option value="rock">Rock</option>
+          <option value="world">World</option>
+        </select>
+        <br><br>
+
+        <iframe class="col-sm-12" id="heatmap" style="height:40em" width=100% height=100%  src="fig/heatmaps/blues.html" frameborder="0" allowfullscreen scrolling="no">
+                Your browser does not support inline frames.
+        </iframe>
+
+
+        <hr>
         <select id="feature" onchange="updateFeature(this);" value="Feature : ">
-                  <option value="year" selected>Year</option>
-                  <option value="duration">Duration</option>
-                  <option value="loudness">Loudness</option>
-                  <option value="tempo">Tempo</option>
-                  <option value="artist_hotttnesss">Artist hotttnesss</option>
-                  <option value="artist_familiarity">Artist familiarity</option>
-                  <option value="genre">Genre</option>
+          <option value="year" selected>Year</option>
+          <option value="duration">Duration</option>
+          <option value="loudness">Loudness</option>
+          <option value="tempo">Tempo</option>
+          <option value="artist_hotttnesss">Artist hotttnesss</option>
+          <option value="artist_familiarity">Artist familiarity</option>
+          <option value="genre">Genre</option>
 
-                </select>
+        </select>
 
         <br><br>
 
@@ -251,6 +323,7 @@
             <div class="bk-plotdiv" id="1bf05ff7-9f2f-4a1a-8b6a-bb4ebb44769d"></div>
           </div>
 
+
           <div class="electronica bokeh-plottt center-plot" style="display:none">
             <div class="bk-plotdiv" id="7394a641-c4f8-4878-bf34-cb35f52fd08f"></div>
           </div>
@@ -291,45 +364,6 @@
             <div class="bk-plotdiv" id="ac866803-ea11-4757-9b20-5066a448b5b0"></div>
           </div>
         </div>
-
-        <hr>
-
-        <!-- Post Content -->
-        <p class="lead">Introduction</p>
-
-        <p>Million song dataset description</p>
-        <img class="img-fluid" src="img/legend.png" alt="legend" />
-        <img class="img-fluid rounded" src="img/genredistribution.png" alt="distribution" align="center" />
-
-        <hr>
-        <p>Evolution of music genre over time</p>
-        <img class="img-fluid" src="img/year.png" alt="evolution of music genre over time" />
-        <p>Certain genre raggae pas tres a la mode. Selon les annees. </p>
-
-
-        <hr>
-        <p>Heatmap</p>
-
-
-        <select id="genre" onchange="udpateHeatMap(this);" value="Genre : ">
-                  <option value="blues" selected>Blues</option>
-                  <option value="country">Country</option>
-                  <option value="electronica">Electronica</option>
-                  <option value="folk">Folk</option>
-                  <option value="hiphop">Hip-Hop</option>
-                  <option value="jazz">Jazz</option>
-                  <option value="metal">Metal</option>
-                  <option value="orchestral">Orchestral</option>
-                  <option value="pop">Pop</option>
-                  <option value="raggae">Reggae</option>
-                  <option value="rock">Rock</option>
-                  <option value="world">World</option>
-                </select>
-        <br><br>
-
-        <iframe class="col-sm-12" id="heatmap" style="height:40em" width=100% height=100% src="fig/heatmaps/blues.html" frameborder="0" allowfullscreen scrolling="no">
-                        Your browser does not support inline frames.
-                </iframe>
 
 
         <hr>
