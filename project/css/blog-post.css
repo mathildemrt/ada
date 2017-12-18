@@ -6,16 +6,14 @@
 
 body {
     padding-top: 54px;
-    font-family: 'BioRhyme', serif;
-/*    font-family: 'BioRhyme Expanded', serif;
-    font-family: 'Space Mono', monospace;*/
+    font-family: 'Open Sans', sans-serif;
 }
 
 .title{
-    font-family: 'BioRhyme', serif;
+    
 }
 .subtitle{
-   font-family: 'Space Mono', monospace;
+   
     color:"#AAA";
     font-size:0.7em;
     font-style: italic;
@@ -29,7 +27,7 @@ body {
 }
 
 p{
-    font-family: 'Open Sans', sans-serif;
+    
     text-align: justify;
     font-size  : 15px;
 }
