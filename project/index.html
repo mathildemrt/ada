@@ -225,6 +225,30 @@
 
         <hr>
         <h2>Artist familiarity and hotttnesss</h2>
+
+        <br>
+        <p><i><b>Artist familiarity </b></i> corresponds to how famous an artist is. You can see familiarity as the likelihood that any person selected at random will have heard of the artist. <i>Beatles</i> have a familiarity close to 1, while an artist like <i>Lucien Foort</i> has a familiarity close to zero.<br>
+        <i><b> Artist hotttnesss </b></i> corresponds to how much buzz the artist was getting in 2011. This is derived from many sources, including mentions on the web, mentions in music blogs, music reviews, play counts, etc. Note that this scores should be updated every year, as it changes a lot over the years</p>
+
+        <p>The following plot shows different Artists in the <i>Artist familiarity</i> and <i>Artist hotttnesss</i> space.
+        <br>  Select a genre on the left to query a subset of Artist to plot.
+           Hover over the circles to see more information about each Artist.</p>
+
+
+        <p>There is a clear correlation bewteen familiarity and hotttnesss,
+          familiar artists tend to be hotter than non-familiar artists.</p>
+        <p> Looking at the 100 hotttest Artist, we see a clear dominance of the genre <i>Hip-Hop</i> and <i>Pop</i> genre,
+           with Artist like <i>Kanye West (Hip-Hop)</i>, <i>Eminem (Hip-Hop)</i>, <i>Rihanna (Pop)</i> those are celebrety getting a a lot buzz.
+            Those two genre are also well represented in the 100 most familiar Artist.
+
+           Whereas looking at  the 100 less hottt Artist, The proportion of the genres electronica and reggaeare high compared to their proportion in the all dataset.
+           We could explain this by the fact that most of the Artist from those genres are not well cover and have a restricted public. </p>
+
+        <p> This <i>Artist familiarity</i> and <i>Artist hotttnesss</i> space helps to visualize the up and comings artist (top left: high hotttnesss and low familiarity)
+          as well as the popular artists that fading away (bottom right: high familiarity and low hotttnesss). <p>
+
+
+
         <select id="fgenre" onchange="updateFgenre(this);" value="Genre : ">
                   <option value="all" selected>All</option>
                   <option value="blues">Blues</option>
@@ -303,15 +327,15 @@
             <div class="bk-plotdiv" id="9ad3c598-f2c6-4d09-b291-a82fb2b17539"></div>
           </div>
 
-          <div class="raggae bokeh-plottt" style="display:none">
+          <div class="raggae bokeh-plottt center-plot"  style="display:none">
             <div class="bk-plotdiv" id="7cd4c4dd-9fbb-4d52-8174-934184811a47"></div>
           </div>
 
-          <div class="rock bokeh-plottt" style="display:none">
+          <div class="rock bokeh-plottt center-plot"  style="display:none">
             <div class="bk-plotdiv" id="92d5f11a-a2b5-4425-8c56-8e03be537b40"></div>
           </div>
 
-          <div class="world bokeh-plottt" style="display:none">
+          <div class="world bokeh-plottt center-plot"  style="display:none">
             <div class="bk-plotdiv" id="ac866803-ea11-4757-9b20-5066a448b5b0"></div>
           </div>
         </div>
