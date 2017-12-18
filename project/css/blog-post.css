@@ -29,8 +29,9 @@ body {
 }
 
 p{
+    font-family: 'Open Sans', sans-serif;
     text-align: justify;
-    font-size  : 14px;
+    font-size  : 15px;
 }
 
 .bk-toolbar-wrapper{
