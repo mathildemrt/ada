@@ -20,5 +20,9 @@ body {
     font-size:0.7em;
     font-style: italic;
 }
-
-
+.center-plot{
+  height:auto !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
