@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ADA Project - Evolution of music genre</title>
+    <title>ADA Project - Evolution of music genres</title>
 
     <!-- favicon-->
     <link rel="icon" href="img/favicon.ico" />
@@ -71,7 +71,7 @@
       <div class="col-lg-9">
 
         <!-- Title -->
-        <h1 class="mt-4 title">Evolution of music genre</h1>
+        <h1 class="mt-4 title">Evolution of music genres</h1>
 
         <!-- Authors -->
         <p class="subtitle">
@@ -129,7 +129,7 @@
     <div class="row">
 
       <div class="col-lg-12">
-    
+
         <hr>
         <!-- Post Content -->
         <p class="lead">Million Song Dataset (MSD), a famous dataset with freely available collection of audio features and metadata for a million contemporary popular music tracks.</p>
@@ -139,33 +139,14 @@
 
         <p>A subset of 10.000 songs from the dataset we used for this project is avalaible for download <a href="https://labrosa.ee.columbia.edu/millionsong/pages/getting-dataset">here</a>.</p>
 
-          
-        <br><br>
-        <h2>Dataset description</h2>
-
-        <p>The songs here are mostly ranging from 1920 to 2010, with a peak in the year 2000s.</p>
-        <p>The entire dataset is 280GB, so we used the cluster to work on it. The MSD contains some Additional files which provide us with all the different tags that could define a song.</p>
-        <p>For instance the song xxx has the following tags :</p>
-        <video src="" ></video>
-        <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to define what is a genre and a subgenre. And try to macth all those tags to a genre. And it's not a easy task to classify music genre and classify certain song.</p>
-
-        <br><br>
-        <img class="img-fluid rounded" src="img/yeardistribution.png" alt="Year distribution"/>
-        <p>We notice that the number of the songs starts to increase significantly in the 1980s, likely coinciding with the invention of the CD. CD sales began declining in 2000 due to the increasing popularity of a new digital format known as the MP3.</p>
-                    
-        <div class="bk-root center-plot">
-          <div class="bk-plotdiv" id="bd8ed138-7ee1-4238-9277-57d0e033f432"></div>
-        </div>
-
-        <div class="bk-root center-plot">
-          <div class="bk-plotdiv" id="540cfaa6-45bf-445d-9775-d89162253b99"></div>
-          <div class="bk-plotdiv" id="ea1b6e81-4cc4-42c0-a0d8-cd4eb8f00bb3"></div>
-        </div>
 
 
         <br><br>
-        <h2>Find the genre of a song</h2>
+        <hr>
+        <h2>What are the main music genres ?</h2>
         <p>Since our general task is to model the genre of a the songs, we decided to classify every music under one of those genre :</p>
+        <img class="img-fluid" src="img/legend.png" alt="legend" />
+
           <ul>
             <li>Blues</li>
             <li>Country</li>
@@ -181,16 +162,42 @@
             <li>World</li>
           </ul>
 
-        <img class="img-fluid" src="img/legend.png" alt="legend" />
+
+
+
+        <br><br>
+        <hr>
+        <h2>Dataset description</h2>
+
+        <p>The songs here are mostly ranging from 1920 to 2010, with a peak in the year 2000s.</p>
+        <p>The entire dataset is 280GB, so we used the cluster to work on it. The MSD contains some Additional files which provide us with all the different tags that could define a song.</p>
+        <p>For instance the song xxx has the following tags :</p>
+        <video src="" ></video>
+        <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to define what is a genre and a subgenre. And try to macth all those tags to a genre. And it's not a easy task to classify music genre and classify certain song.</p>
+
+        <br><br>
+        <img class="img-fluid rounded" src="img/yeardistribution.png" alt="Year distribution"/>
+        <p>We notice that the number of the songs starts to increase significantly in the 1980s, likely coinciding with the invention of the CD. CD sales began declining in 2000 due to the increasing popularity of a new digital format known as the MP3.</p>
+
+        <div class="bk-root center-plot">
+          <div class="bk-plotdiv" id="bd8ed138-7ee1-4238-9277-57d0e033f432"></div>
+        </div>
+
+        <div class="bk-root center-plot">
+          <div class="bk-plotdiv" id="540cfaa6-45bf-445d-9775-d89162253b99"></div>
+          <div class="bk-plotdiv" id="ea1b6e81-4cc4-42c0-a0d8-cd4eb8f00bb3"></div>
+        </div>
+
+
 
         <hr>
-        <h2>Evolution of music genre over time</h2>
-        <img class="img-fluid" src="img/year.png" alt="evolution of music genre over time" />
-        <p>The graph below shows the evolution and development of certain music genre over time. It states that Jazz and Blues are loosing popularity over time wheras electronic music which was completly new in the 1980's is becoming more and more popular. We can clearly see the creation of metal music in  the early 1970s</p>
+        <h2>Evolution of music genres over time</h2>
+        <img class="img-fluid" src="img/year.png" alt="evolution of music genres over time" />
+        <p>The graph below shows the evolution and development of certain music genres over time. It states that Jazz and Blues are loosing popularity over time wheras electronic music which was completly new in the 1980's is becoming more and more popular. We can clearly see the creation of metal music in  the early 1970s</p>
 
 
         <hr>
-        <h2>Evolution of music genre over time and space</h2>
+        <h2>Evolution of music genres over time and space</h2>
         <p>Show the most popular genre in a certain region at a given year.</p>
 
 
@@ -215,65 +222,9 @@
         </iframe>
 
 
-        <hr>
-        <select id="feature" onchange="updateFeature(this);" value="Feature : ">
-          <option value="year" selected>Year</option>
-          <option value="duration">Duration</option>
-          <option value="loudness">Loudness</option>
-          <option value="tempo">Tempo</option>
-          <option value="artist_hotttnesss">Artist hotttnesss</option>
-          <option value="artist_familiarity">Artist familiarity</option>
-          <option value="genre">Genre</option>
-
-        </select>
-
-        <br><br>
-
-        <div class="bk-root center-plot">
-          <div class="year bokeh-plot center-plot">
-            <div class="bk-plotdiv" id="0cc75d9d-53cc-4307-961f-753042617227"></div>
-            <div class="bk-plotdiv" id="6eee9180-347d-4a4c-a49c-40b5a02f428d"></div>
-          </div>
-
-          <div class="duration bokeh-plot center-plot" style="display:none">
-            <div class="bk-plotdiv" id="883d6329-d94a-4283-9293-6e849e9740c2"></div>
-            <div class="bk-plotdiv" id="4619d2c8-977c-4798-be36-6fd335aea5ce"></div>
-          </div>
-
-          <div class="loudness bokeh-plot center-plot" style="display:none">
-            <div class="bk-plotdiv" id="ead5d40d-4984-4cd9-8ab7-ce4ad6b98af9"></div>
-            <div class="bk-plotdiv" id="ecf34c39-d7b2-41d4-a717-972b0c17225c"></div>
-          </div>
-
-          <div class="tempo bokeh-plot center-plot" style="display:none">
-            <div class="bk-plotdiv" id="6d2617d2-7e87-4a98-a4bc-0ab1f6e6df1d"></div>
-            <div class="bk-plotdiv" id="d22249cc-7330-4703-a121-aee852ae2884"></div>
-          </div>
-
-          <div class="artist_hotttnesss bokeh-plot center-plot" style="display:none">
-            <div class="bk-plotdiv" id="404b94a9-0c22-45e6-8bad-509e172d753e"></div>
-            <div class="bk-plotdiv" id="b4042cd5-db3f-4a49-b85b-31a70323bd70"></div>
-          </div>
-
-
-          <div class="artist_familiarity bokeh-plot center-plot" style="display:none">
-            <div class="bk-plotdiv" id="20ccac0e-bc92-4beb-bf31-61b956ae13bf"></div>
-            <div class="bk-plotdiv" id="0d21410b-56e0-45bf-89b6-145f9feeb84e"></div>
-          </div>
-
-          <div class="genre bokeh-plot center-plot" style="display:none">
-            <div class="bk-plotdiv" id="b65478c8-6c1c-434e-ab93-f34810d8f691"></div>
-            <div class="bk-plotdiv" id="b529ee48-2248-4c9a-b2e7-c4ec3267f1b6"></div>
-            <div class="bk-plotdiv" id="bfee38ca-c6e0-49a2-985e-c7a5d1dedc99"></div>
-          </div>
-
-
-          <hr>
-        </div>
-
 
         <hr>
-        <p>Artist familiarity and hotttnesss</p>
+        <h2>Artist familiarity and hotttnesss</h2>
         <select id="fgenre" onchange="updateFgenre(this);" value="Genre : ">
                   <option value="all" selected>All</option>
                   <option value="blues">Blues</option>
@@ -363,6 +314,67 @@
           <div class="world bokeh-plottt" style="display:none">
             <div class="bk-plotdiv" id="ac866803-ea11-4757-9b20-5066a448b5b0"></div>
           </div>
+        </div>
+
+
+        <hr>
+        <h2>The 1000 hotttest songs</h2>
+
+        <select id="feature" onchange="updateFeature(this);" value="Feature : ">
+          <option value="year" selected>Year</option>
+          <option value="duration">Duration</option>
+          <option value="loudness">Loudness</option>
+          <option value="tempo">Tempo</option>
+          <option value="artist_hotttnesss">Artist hotttnesss</option>
+          <option value="artist_familiarity">Artist familiarity</option>
+          <option value="genre">Genre</option>
+
+        </select>
+
+        <br><br>
+
+
+
+        <div class="bk-root center-plot">
+          <div class="year bokeh-plot center-plot">
+            <div class="bk-plotdiv" id="0cc75d9d-53cc-4307-961f-753042617227"></div>
+            <div class="bk-plotdiv" id="6eee9180-347d-4a4c-a49c-40b5a02f428d"></div>
+          </div>
+
+          <div class="duration bokeh-plot center-plot" style="display:none">
+            <div class="bk-plotdiv" id="883d6329-d94a-4283-9293-6e849e9740c2"></div>
+            <div class="bk-plotdiv" id="4619d2c8-977c-4798-be36-6fd335aea5ce"></div>
+          </div>
+
+          <div class="loudness bokeh-plot center-plot" style="display:none">
+            <div class="bk-plotdiv" id="ead5d40d-4984-4cd9-8ab7-ce4ad6b98af9"></div>
+            <div class="bk-plotdiv" id="ecf34c39-d7b2-41d4-a717-972b0c17225c"></div>
+          </div>
+
+          <div class="tempo bokeh-plot center-plot" style="display:none">
+            <div class="bk-plotdiv" id="6d2617d2-7e87-4a98-a4bc-0ab1f6e6df1d"></div>
+            <div class="bk-plotdiv" id="d22249cc-7330-4703-a121-aee852ae2884"></div>
+          </div>
+
+          <div class="artist_hotttnesss bokeh-plot center-plot" style="display:none">
+            <div class="bk-plotdiv" id="404b94a9-0c22-45e6-8bad-509e172d753e"></div>
+            <div class="bk-plotdiv" id="b4042cd5-db3f-4a49-b85b-31a70323bd70"></div>
+          </div>
+
+
+          <div class="artist_familiarity bokeh-plot center-plot" style="display:none">
+            <div class="bk-plotdiv" id="20ccac0e-bc92-4beb-bf31-61b956ae13bf"></div>
+            <div class="bk-plotdiv" id="0d21410b-56e0-45bf-89b6-145f9feeb84e"></div>
+          </div>
+
+          <div class="genre bokeh-plot center-plot" style="display:none">
+            <div class="bk-plotdiv" id="b65478c8-6c1c-434e-ab93-f34810d8f691"></div>
+            <div class="bk-plotdiv" id="b529ee48-2248-4c9a-b2e7-c4ec3267f1b6"></div>
+            <div class="bk-plotdiv" id="bfee38ca-c6e0-49a2-985e-c7a5d1dedc99"></div>
+          </div>
+
+
+          <hr>
         </div>
 
 
