@@ -15,6 +15,7 @@ from bokeh.charts import Donut
 
 from bokeh.resources import CDN
 from bokeh.embed import file_html
+from bokeh.embed import components
 
 
 
@@ -29,20 +30,6 @@ genre_color = {'blues': '#75bbfd', 'country': '#653700', 'electronica': '#9a0eea
                'reggae': '#02ab2e', 'world': '#a0bf16'}
 
 
-def song_selected():
-    (start, end) = year_slider.value
-
-    if 1 in checkbox_year.active:
-        selected=df[(df.year>=start) & (df.year<=end) | (df.year==0)]
-    else:
-        selected = df[(df.year >= start) & (df.year <= end)]
-
-    if 0 not in checkbox_year.active:
-        selected =selected[df.artist_latitude>=0]
-
-
-    return selected
-
 
 
 def update(attr, old, new):
@@ -50,44 +37,75 @@ def update(attr, old, new):
 
 
 
+
 checkbox_year = CheckboxGroup(labels=["Show songs with missing location","Show songs with missing year"], active=[0])
 checkbox_year.on_change('active', update)
 
-year_slider = RangeSlider(start=1940, end=2010, value=(1940,2010), step=5, title="year")
+year_slider = RangeSlider(start=1940, end=2011, value=(1940,2011), step=5, title="year")
 year_slider.on_change('value', update)
+
+
+(start, end) = year_slider.value
+
+dfy=df[(df.year>=start) & (df.year<=end)]
+
+dfyc = dfy[dfy.artist_latitude>=0]
 
 
 
 def create_figure():
 
 
-    data = song_selected()
-
     p = figure(plot_height=400, plot_width=400)
-    if len(data) > 0:
+
+    count = df.genre.value_counts()
+
+    colors = [genre_color[x] for x in count.index.sort_values()]
+
+    p = Donut(count, label='index', color=colors, height=400, width=400,hover_text='#songs')
+
+    p.title.text = "#Songs = {}".format(len(df))
 
 
 
-        #title = 'The {} most {} songs'.format( var_slider.value,type.value)
+
+    py = figure(plot_height=400, plot_width=400)
+
+    count = dfy.genre.value_counts()
+
+    colors = [genre_color[x] for x in count.index.sort_values()]
+
+    py = Donut(count, label='index', color=colors, height=400, width=400, hover_text='#songs')
+
+    py.title.text = "#Songs w/o missing year = {}".format(len(dfy))
 
 
-        count = data.genre.value_counts()
-
-        colors = [genre_color[x] for x in count.index.sort_values()]
-
-        p = Donut(count, label='index', color=colors, height=400, width=400,hover_text='#songs')
-
-        p.title.text = "#songs = {}".format(len(data))
 
 
-    return p
+    pyc = figure(plot_height=400, plot_width=400)
+
+    count = dfy.genre.value_counts()
+
+    colors = [genre_color[x] for x in count.index.sort_values()]
+
+    pyc = Donut(count, label='index', color=colors, height=400, width=400, hover_text='#songs')
+
+    pyc.title.text = "#Songs w/o missing year and location = {}".format(len(dfyc))
+
+
+    return p,py,pyc
 
 
 controls = widgetbox([checkbox_year,year_slider], width=200)
 
-
-layout = row(controls, create_figure())
+a,b,c=create_figure()
+layout = row(controls, a,b,c)
 
 curdoc().add_root(layout)
 curdoc().title = "Hottness_familiarity"
 
+plots = {'1':a,'2': b,'3':c}
+
+script, div = components(plots)
+print(script)
+print(div)
