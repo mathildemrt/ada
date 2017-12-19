@@ -139,8 +139,8 @@
 
         <p>A subset of 10.000 songs from the dataset we used for this project is avalaible for download <a href="https://labrosa.ee.columbia.edu/millionsong/pages/getting-dataset">here</a>.</p>
         <br><br><hr>
-          
-          
+
+
         <h2>What are the main music genres ?</h2>
         <p>
           Music comes in many different types and styles ranging from traditional rock music to world pop, easy listening and bluegrass.
@@ -384,22 +384,23 @@
           <div class="bk-plotdiv" id="f1beff7f-17c4-4d20-8d6a-6cc825df62a3"></div>
           <div class="bk-plotdiv" id="b53fe81b-9e0b-4022-9592-5369692b15f4"></div>
         </div>
-        
+
         <br><br>
         <p>The dataset contains songs mostly <b>ranging from 1920 to 2010</b>, with a peak in the year 2000s.</p>
         <p>We notice that the number of the songs starts to increase significantly in the 1980s, likely coinciding with the invention of the CD and continue to increase the 2000s with the increasing popularity digital format such as MP3.</p>
           <!--Year distribution anchor-->
         <a id="year_distribution"></a>
         <img class="img-fluid rounded" src="img/yeardistribution.png" alt="Year distribution"/>
-        
-          
+
+
         <br><br>
         <p>The MSD contains some Additional files which provide us with all the different tags that define a song.</p>
         <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to match a maximum of those tags to a genre. And it's not a easy task to classify music genre and classify certain song.</p>
         <p>For instance the song <i>Soul Deep from The Box Tops</i> has the following tags :</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/--f55NUHGbo?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        
+
         <p>
+
             <span class="badge badge-default" style="background-color: #e50000; color:white">blue-eyed soul</span>
             <span class="badge badge-default" style="background-color: #ff81c0; color:white">pop rock</span>
             <span class="badge badge-default" style="background-color: #75bbfd; color:white">blues-rock</span>
@@ -438,10 +439,16 @@
             <span class="badge badge-default" style="background-color: #eeeeee; color:black">cover</span>
             <span class="badge badge-default" style="background-color: #eeeeee; color:black">nederland</span>
             <span class="badge badge-default" style="background-color: #eeeeee; color:black">confident</span>
-        </p> 
-          
-        <p>We noticed that the genre is often define by the last word of the tag, in case of a tag composed by multiple words. For instance <span class="badge badge-info" style="background-color: #2242c7;">psychedelic rock</span> as would be classified as rock and <span class="badge badge-info" style="background-color: #ff81c0;">power pop</span> as pop.<br>
-        Each tag is also sassociated to a certain weight, so we decided to sum the weight of every genre and retain only the genre having the maximun weight as the genre of the song.</p>
+        </p>
+
+        <p> We build a dictionnary to match the maximum of those tags to a genre. Above, the color of the tags indicates its genre.
+        Each tag is also associated to a certain weight, so we computed for a song the cumulative weight for each genre, and retain only the genre having the maximun cumulative weight. For instance, the previous song was classified as <span class="badge badge-default" style="background-color: #2242c7; color:white">Rock</span> as the cumulative weight were:
+            <span class="badge badge-default" style="background-color: #2242c7; color:white">Rock 4.3</span>
+            <span class="badge badge-default" style="background-color: #ff81c0; color:white">Pop 3.7</span>
+            <span class="badge badge-default" style="background-color: #e50000; color:white">Hip-Hop 2.4</span>
+            <span class="badge badge-default" style="background-color: #75bbfd; color:white">Blues 1.5</span>
+            <span class="badge badge-default" style="background-color: #929591; color:white">Orchestral 0.6</span>
+        </p>
 
         <br><br><hr>
         <h2>Evolution of music genres over time</h2>
