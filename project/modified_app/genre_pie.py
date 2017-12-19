@@ -84,7 +84,7 @@ def create_figure():
 
     pyc = figure(plot_height=400, plot_width=400)
 
-    count = dfy.genre.value_counts()
+    count = dfyc.genre.value_counts()
 
     colors = [genre_color[x] for x in count.index.sort_values()]
 
