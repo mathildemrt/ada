@@ -4,9 +4,16 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-post/blob/master/LICENSE)
  */
 
-body {
+htlm, body {
+    min-height:100%;
+    position:relative;
     padding-top: 54px;
     font-family: 'Open Sans', sans-serif;
+}
+.post{
+    min-height:100%;
+    position:relative;
+    padding-bottom: 6em;
 }
 
 .title, h1, h2, .card-header{
@@ -39,4 +46,12 @@ p{
     width:auto;
     height:auto;
     margin :0;
+}
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding:1rem;
 }
