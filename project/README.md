@@ -82,9 +82,12 @@ During this milestone we will focus our work on 3 tasks:
 - Display a music genre propagation over time on an interactive map
 - Display the music genres production over time
 
-### Music genre analysis:
+#### Music genre analysis:
 - look at the most familiar, and hotttest Artist, most hotttest songs according to different feature.
 - Identidy genre those are up and coming, getting buzz or fading away...
+
+#### Bokeh app:
+- different interactive visualisation were done with bokeh:`genre_pie.py`, `most_h`, `artist_hf`. To view the app directly from a Bokeh server, navigate to the parent directory project/bokeh_app, and execute the command: `bokeh serve --show app_name.py`
 
 ## Questions for TAs
 
