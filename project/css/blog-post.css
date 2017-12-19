@@ -9,8 +9,8 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.title{
-    
+.title, h1, h2{
+    font-family: 'Julius Sans One', sans-serif;
 }
 .subtitle{
    
