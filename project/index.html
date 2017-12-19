@@ -27,43 +27,44 @@
     <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.js"></script>
     <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.js"></script>
 
+    <script src="vendor/jquery/jquery.min.js"></script>
     <link href="css/blog-post.css" rel="stylesheet">
-    <script src="js/index.js"></script>
+
+
+    
 
 </head>
-
 <body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Applied Data Analysis - Fall 2017</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Project
-                <span class="sr-only">(current)</span>
-              </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Applied Data Analysis - Fall 2017</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Project
+                    <span class="sr-only">(current)</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
 
   <!-- Page Content -->
-  <div class="container">
+  <div class="container post" style="display:none;">
 
     <div class="row">
 
@@ -174,13 +175,16 @@
           <div class="bk-plotdiv" id="f1beff7f-17c4-4d20-8d6a-6cc825df62a3"></div>
           <div class="bk-plotdiv" id="b53fe81b-9e0b-4022-9592-5369692b15f4"></div>
         </div>
-          
+        
+        <br><br>
         <p>The dataset contains songs mostly <b>ranging from 1920 to 2010</b>, with a peak in the year 2000s.</p>
+        <p>We notice that the number of the songs starts to increase significantly in the 1980s, likely coinciding with the invention of the CD and continue to increase the 2000s with the increasing popularity digital format such as MP3.</p>
         <img class="img-fluid rounded" src="img/yeardistribution.png" alt="Year distribution"/>
-        <p>We notice that the number of the songs starts to increase significantly in the 1980s, likely coinciding with the invention of the CD. CD sales began declining in 2000 due to the increasing popularity of a new digital format known as the MP3.</p>
+        
           
-      
-        <p>The MSD contains some Additional files which provide us with all the different tags that could define a song.</p>
+        <br><br>
+        <p>The MSD contains some Additional files which provide us with all the different tags that define a song.</p>
+        <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to match a maximum of those tags to a genre. And it's not a easy task to classify music genre and classify certain song.</p>
         <p>For instance the song <i>Soul Deep from The Box Tops</i> has the following tags :</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/--f55NUHGbo?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         
@@ -204,7 +208,7 @@
             <span class="badge badge-info">united states</span>
             <span class="badge badge-info">rock 'n roll</span>
             <span class="badge badge-info">am pop</span>
-            <span class="badge badge-info">r&b</span>
+            <span class="badge badge-info">r&amp;b</span>
             <span class="badge badge-info">american</span>
             <span class="badge badge-info">male</span>
             <span class="badge badge-info">psychedelic</span>
@@ -225,14 +229,15 @@
             <span class="badge badge-info">confident</span>
         </p> 
           
-        <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to match a maximum of those tags to a genre. And it's not a easy task to classify music genre and classify certain song.</p>
         <p>We noticed that the genre is often define by the last word of the tag, in case of a tag composed by multiple words. For instance <span class="badge badge-info">blue-eyed soul</span> would be classified as soul, <span class="badge badge-info">psychedelic rock</span> as rock and  <span class="badge badge-info">power pop</span> as pop.<br>
-        Each tag is associated to a certain weight, so we decided to sum the weight of every genre and retain only the genre having the maximun weight as the genre of the song.</p>
+        Each tag is also sassociated to a certain weight, so we decided to sum the weight of every genre and retain only the genre having the maximun weight as the genre of the song.</p>
+
         <hr>
         <h2>Evolution of music genres over time</h2>
         <img class="img-fluid" src="img/year.png" alt="evolution of music genres over time" />
         <p>The graph below shows the evolution and development of certain music genres over time. It clearly show that rock music is the most popular music genre especially in the 80's. It states that Jazz and Blues are loosing popularity over time wheras electronic music which was completly new in the 1980's is becoming more and more popular. We can clearly see the creation of metal music in  the early 1970s</p>
 
+        <p>The evolution of Hip-Hop music is surprising. We do not expect hip hop to be present in the 60's. At the first sight we thought we missed something but turns out that we can explain this evolution of Hip-hop by the fact that under Hip-Hop we included together Hip-Hop, Rap, Soul music and Rythm&amp;Blues. The first period, from 1960 to 1980, contains a a majority of Soul and Rythm&amp;Blues music wheras the last perio starting in the 90's coincides with the genesis of Rap and Hip-hop music that we know today.</p>
 
         <hr>
         <h2>Evolution of music genres over time and space</h2>
@@ -510,17 +515,23 @@
   </div>
   <!-- /.container -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.post').show();
+    });
+    </script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
