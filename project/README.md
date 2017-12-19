@@ -86,9 +86,6 @@ During this milestone we will focus our work on 3 tasks:
 - look at the most familiar, and hotttest Artist, most hotttest songs according to different feature.
 - Identidy genre those are up and coming, getting buzz or fading away...
 
-
-## Final presentation & poster *[Thibaut, Mathilde, Noé]*
-
 ## Questions for TAs
 
 For Week 1 and 2:
@@ -99,3 +96,4 @@ For Week 4:
 - Is there a common way to represent the result of a classifictation with many feature? Do you have some advice do that?  
 
 
+## Final presentation & poster *[Thibaut, Mathilde, Noé]*
