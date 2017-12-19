@@ -3,32 +3,32 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>ADA Project - Evolution of music genres</title>
+  <title>ADA Project - Evolution of music genres</title>
 
-    <!-- favicon-->
-    <link rel="icon" href="img/favicon.ico" />
+  <!-- favicon-->
+  <link rel="icon" href="img/favicon.ico" />
 
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="SCReet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css" />
-    <link href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" rel="stylesheet" type="text/css">
-    <link href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.css" rel="stylesheet" type="text/css">
-    <link href="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.css" rel="stylesheet" type="text/css">
+  <link rel="SCReet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css" />
+  <link href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.css" rel="stylesheet" type="text/css">
 
-    <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
-    <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.js"></script>
-    <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.js"></script>
+  <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
+  <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.js"></script>
+  <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.7.min.js"></script>
 
-    <link href="css/blog-post.css" rel="stylesheet">
-    <script src="js/index.js"></script>
+  <link href="css/blog-post.css" rel="stylesheet">
+  <script src="js/index.js"></script>
 
 </head>
 
@@ -135,7 +135,7 @@
         <p class="lead">Million Song Dataset (MSD), a famous dataset with freely available collection of audio features and metadata for a million contemporary popular music tracks.</p>
 
         <p>There are many attractive features in the MSD. Here, what we want to focus are the year, location and genre of a song. Based on these features, for each year, we define the most prolific types of music over time and understand their evolution.
-        The purpose of this project in Robert West's <em>CS-401 Applied Data Analysis (ADA)</em> class of Fall 2017 at EPFL is to show the evolution of the music genres over time and space.</p>
+          The purpose of this project in Robert West's <em>CS-401 Applied Data Analysis (ADA)</em> class of Fall 2017 at EPFL is to show the evolution of the music genres over time and space.</p>
 
         <p>A subset of 10.000 songs from the dataset we used for this project is avalaible for download <a href="https://labrosa.ee.columbia.edu/millionsong/pages/getting-dataset">here</a>.</p>
 
@@ -146,21 +146,212 @@
         <h2>What are the main music genres ?</h2>
         <p>Since our general task is to model the genre of a the songs, we decided to classify every music under one of those genre :</p>
         <img class="img-fluid" src="img/legend.png" alt="legend" />
+        <div class="row">
+          <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-blues" role="tab" aria-controls="Blues">Blues</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-country" role="tab" aria-controls="profile">Country</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-electronica" role="tab" aria-controls="messages">Electronica</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-folk" role="tab" aria-controls="settings">Folk</a>
+              <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-hiphop" role="tab" aria-controls="Blues">Hip Hop</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-jazz" role="tab" aria-controls="profile">Jazz</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-metal" role="tab" aria-controls="messages">Metal</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-orchestral" role="tab" aria-controls="settings">Orchestral</a>
+              <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-pop" role="tab" aria-controls="Blues">Pop</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-reggae" role="tab" aria-controls="profile">Reggae</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-rock" role="tab" aria-controls="messages">Rock</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-world" role="tab" aria-controls="settings">World</a>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-blues" role="tabpanel" aria-labelledby="list-home-list">
+                <ul class="list-group">
+                <li class="list-group-item">blues</li>
+                <li class="list-group-item">blues rock</li>
+                <li class="list-group-item">chicago blues</li>
+                <li class="list-group-item">delta blues</li>
+                <li class="list-group-item">electric blues</li>
+                <li class="list-group-item">gospel</li>
+                <li class="list-group-item">jump blues</li>
+                <li class="list-group-item">new orleans blues</li>
+                <li class="list-group-item">st louis blues</li>
+                <li class="list-group-item">swamp blues</li>
+                <li class="list-group-item">texas blues</li>
+                <li class="list-group-item">zydeco</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-country" role="tabpanel" aria-labelledby="list-profile-list">
+                <ul class="list-group">
+                <li class="list-group-item">bluegrass</li>
+                <li class="list-group-item">country</li>
+                <li class="list-group-item">country pop</li>
+                <li class="list-group-item">honky tonk</li>
+                <li class="list-group-item">mountain</li>
+                <li class="list-group-item">neotraditional</li>
+                <li class="list-group-item">outlaw</li>
+                <li class="list-group-item">traditional</li>
+                <li class="list-group-item">western</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-electronica" role="tabpanel" aria-labelledby="list-messages-list">
+                <ul class="list-group">
 
-          <ul>
-            <li>Blues</li>
-            <li>Country</li>
-            <li>Electronic</li>
-            <li>Folk</li>
-            <li>Jazz</li>
-            <li>Pop</li>
-            <li>Metal</li>
-            <li>Rock</li>
-            <li>Orchestral</li>
-            <li>Hip-Hop</li>
-            <li>Raggae</li>
-            <li>World</li>
-          </ul>
+                <li class="list-group-item">ambient</li>
+                <li class="list-group-item">dubstep</li>
+                <li class="list-group-item">electronica</li>
+                <li class="list-group-item">house</li>
+                <li class="list-group-item">techno</li>
+                <li class="list-group-item">trance</li>
+                <li class="list-group-item">trip hop</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-folk" role="tabpanel" aria-labelledby="list-settings-list">
+                <ul class="list-group">
+
+                <li class="list-group-item">american roots</li>
+                <li class="list-group-item">folk</li>
+                <li class="list-group-item">folk pop</li>
+                <li class="list-group-item">folk rock</li>
+                <li class="list-group-item">jam</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-hiphop" role="tabpanel" aria-labelledby="list-settings-list">
+                <ul class="list-group">
+
+                <li class="list-group-item">alternative hiphop</li>
+                <li class="list-group-item">funk</li>
+                <li class="list-group-item">hiphop</li>
+                <li class="list-group-item">neo soul</li>
+                <li class="list-group-item">new jack swing</li>
+                <li class="list-group-item">rap</li>
+                <li class="list-group-item">soul</li>
+                <li class="list-group-item">urban contemporary</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-jazz" role="tabpanel" aria-labelledby="list-settings-list">
+                <ul class="list-group">
+
+                <li class="list-group-item">acid jazz</li><li class="list-group-item">bebop</li><li class="list-group-item">big band</li><li class="list-group-item">jazz</li><li class="list-group-item">jazz funk</li><li class="list-group-item">jazz fusion</li>
+                <li class="list-group-item">latin jazz</li><li class="list-group-item">ragtime</li>
+                <li class="list-group-item">smooth jazz</li><li class="list-group-item">soft jazz</li>
+                <li class="list-group-item">traditional jazz</li><li class="list-group-item">vocal jazz</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-metal" role="tabpanel" aria-labelledby="list-settings-list">
+                <ul class="list-group">
+
+                <li class="list-group-item">avant garde metal</li>
+                <li class="list-group-item">black metal</li>
+                <li class="list-group-item">classic metal</li>
+                <li class="list-group-item">death metal</li>
+                <li class="list-group-item">doom metal</li>
+                <li class="list-group-item">funk metal</li>
+                <li class="list-group-item">glam metal</li>
+                <li class="list-group-item">goth metal</li>
+                <li class="list-group-item">industrial metal</li>
+                <li class="list-group-item">jazz metal</li>
+                <li class="list-group-item">metal</li>
+                <li class="list-group-item">metalcore</li>
+                <li class="list-group-item">neoclassical metal</li>
+                <li class="list-group-item">nu metal</li>
+                <li class="list-group-item">power metal</li>
+                <li class="list-group-item">progressive metal</li>
+                <li class="list-group-item">rap metal</li>
+                <li class="list-group-item">sleaze metal</li>
+                <li class="list-group-item">sludge metal</li>
+                <li class="list-group-item">speed metal</li>
+                <li class="list-group-item">symphonic metal</li>
+                <li class="list-group-item">thrash metal</li>
+                <li class="list-group-item">viking metal</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-orchestral" role="tabpanel" aria-labelledby="list-settings-list">
+                <ul class="list-group">
+
+                <li class="list-group-item">broadway</li>
+                <li class="list-group-item">classical</li>
+                <li class="list-group-item">movie scores</li>
+                <li class="list-group-item">new age</li>
+                <li class="list-group-item">orchestral</li>
+                <li class="list-group-item">vocal</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-pop" role="tabpanel" aria-labelledby="list-settings-list">
+                <ul class="list-group">
+
+                <li class="list-group-item">adult contemporary</li>
+                <li class="list-group-item">beat pop</li>
+                <li class="list-group-item">dance pop</li>
+                <li class="list-group-item">disco</li>
+                <li class="list-group-item">doo wop</li>
+                <li class="list-group-item">indie pop</li>
+                <li class="list-group-item">latin pop</li>
+                <li class="list-group-item">pop</li>
+                <li class="list-group-item">pop rock</li>
+                <li class="list-group-item">power pop</li>
+                <li class="list-group-item">surf pop</li>
+                <li class="list-group-item">synthpop</li>
+                <li class="list-group-item">traditional pop</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-reggae" role="tabpanel" aria-labelledby="list-settings-list">
+                <ul class="list-group">
+
+                <li class="list-group-item">dancehall</li>
+                <li class="list-group-item">dub</li>
+                <li class="list-group-item">ragga</li>
+                <li class="list-group-item">reggae</li>
+                <li class="list-group-item">roots</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-rock" role="tabpanel" aria-labelledby="list-settings-list">
+                <ul class="list-group">
+
+                <li class="list-group-item">alternative</li>
+                <li class="list-group-item">americana</li>
+                <li class="list-group-item">art rock</li>
+                <li class="list-group-item">classic rock</li>
+                <li class="list-group-item">college rock</li>
+                <li class="list-group-item">dark wave</li>
+                <li class="list-group-item">funk rock</li>
+                <li class="list-group-item">grunge</li>
+                <li class="list-group-item">hard rock</li>
+                <li class="list-group-item">indie rock</li>
+                <li class="list-group-item">new wave</li>
+                <li class="list-group-item">post grunge</li>
+                <li class="list-group-item">progressive rock</li>
+                <li class="list-group-item">psychedelic rock</li>
+                <li class="list-group-item">punk</li>
+                <li class="list-group-item">rock</li>
+                <li class="list-group-item">rockabilly</li>
+                <li class="list-group-item">ska</li>
+                <li class="list-group-item">soft rock</li>
+                <li class="list-group-item">southern rock</li>
+              </ul>
+              </div>
+              <div class="tab-pane fade" id="list-world" role="tabpanel" aria-labelledby="list-settings-list">
+                <ul class="list-group">
+
+                <li class="list-group-item">african</li>
+                <li class="list-group-item">asian</li>
+                <li class="list-group-item">celtic</li>
+                <li class="list-group-item">eastern european</li>
+                <li class="list-group-item">gaelic</li>
+                <li class="list-group-item">hispanic</li>
+                <li class="list-group-item">irish</li>
+                <li class="list-group-item">island</li>
+                <li class="list-group-item">latin</li>
+                <li class="list-group-item">mediterranean</li>
+                <li class="list-group-item">middle eastern</li>
+                <li class="list-group-item">scandinavian</li>
+                <li class="list-group-item">world</li>
+              </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
 
 
 
@@ -172,11 +363,12 @@
         <p>The songs here are mostly ranging from 1920 to 2010, with a peak in the year 2000s.</p>
         <p>The entire dataset is 280GB, so we used the cluster to work on it. The MSD contains some Additional files which provide us with all the different tags that could define a song.</p>
         <p>For instance the song xxx has the following tags :</p>
-        <video src="" ></video>
-        <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to define what is a genre and a subgenre. And try to macth all those tags to a genre. And it's not a easy task to classify music genre and classify certain song.</p>
+        <video src=""></video>
+        <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to define what is a genre and a subgenre. And try to macth all those tags to a genre. And it's not a easy task to classify music genre and classify
+          certain song.</p>
 
         <br><br>
-        <img class="img-fluid rounded" src="img/yeardistribution.png" alt="Year distribution"/>
+        <img class="img-fluid rounded" src="img/yeardistribution.png" alt="Year distribution" />
         <p>We notice that the number of the songs starts to increase significantly in the 1980s, likely coinciding with the invention of the CD. CD sales began declining in 2000 due to the increasing popularity of a new digital format known as the MP3.</p>
 
         <div class="bk-root center-plot">
@@ -193,7 +385,8 @@
         <hr>
         <h2>Evolution of music genres over time</h2>
         <img class="img-fluid" src="img/year.png" alt="evolution of music genres over time" />
-        <p>The graph below shows the evolution and development of certain music genres over time. It states that Jazz and Blues are loosing popularity over time wheras electronic music which was completly new in the 1980's is becoming more and more popular. We can clearly see the creation of metal music in  the early 1970s</p>
+        <p>The graph below shows the evolution and development of certain music genres over time. It states that Jazz and Blues are loosing popularity over time wheras electronic music which was completly new in the 1980's is becoming more and more popular.
+          We can clearly see the creation of metal music in the early 1970s</p>
 
 
         <hr>
@@ -217,7 +410,7 @@
         </select>
         <br><br>
 
-        <iframe class="col-sm-12" id="heatmap" style="height:40em" width=100% height=100%  src="fig/heatmaps/blues.html" frameborder="0" allowfullscreen scrolling="no">
+        <iframe class="col-sm-12" id="heatmap" style="height:40em" width=100% height=100% src="fig/heatmaps/blues.html" frameborder="0" allowfullscreen scrolling="no">
                 Your browser does not support inline frames.
         </iframe>
 
@@ -244,26 +437,26 @@
 
         <br><br>
 
-                <div class="bk-root" style="height:auto">
-                  <div class="all bokeh-plottt">
+        <div class="bk-root" style="height:auto">
+          <div class="all bokeh-plottt">
 
-                    <div class="bk-plotdiv" id="4428b751-8858-456b-8fa6-9f48bdaad4c9"></div>
-                    <div class="bk-plotdiv" id="e8c3b153-5f67-424a-9698-0a89355118e5"></div>
-                  </div>
-
-
-                  <div class="all bokeh-plottt">
-                    <div class="bk-plotdiv" id="a2823712-ee3d-46a5-99fd-0b62312d1f53"></div>
-                    <div class="bk-plotdiv" id="180f5ecf-1df3-4799-b2c7-7258e69bb631"></div>
-                  </div>
-
-                  <div class="all bokeh-plottt">
-                    <div class="bk-plotdiv" id="d038c688-6474-4615-a30f-f3d9a6e8d00d"></div>
-                    <div class="bk-plotdiv" id="38b40789-5d66-4ce4-8287-8b92f77f517c"></div>
+            <div class="bk-plotdiv" id="4428b751-8858-456b-8fa6-9f48bdaad4c9"></div>
+            <div class="bk-plotdiv" id="e8c3b153-5f67-424a-9698-0a89355118e5"></div>
+          </div>
 
 
+          <div class="all bokeh-plottt">
+            <div class="bk-plotdiv" id="a2823712-ee3d-46a5-99fd-0b62312d1f53"></div>
+            <div class="bk-plotdiv" id="180f5ecf-1df3-4799-b2c7-7258e69bb631"></div>
+          </div>
 
-                  </div>
+          <div class="all bokeh-plottt">
+            <div class="bk-plotdiv" id="d038c688-6474-4615-a30f-f3d9a6e8d00d"></div>
+            <div class="bk-plotdiv" id="38b40789-5d66-4ce4-8287-8b92f77f517c"></div>
+
+
+
+          </div>
 
           <div class="blues bokeh-plottt center-plot" style="display:none">
 
@@ -303,15 +496,15 @@
             <div class="bk-plotdiv" id="9ad3c598-f2c6-4d09-b291-a82fb2b17539"></div>
           </div>
 
-          <div class="raggae bokeh-plottt" style="display:none">
+          <div class="raggae bokeh-plottt center-plot" style="display:none">
             <div class="bk-plotdiv" id="7cd4c4dd-9fbb-4d52-8174-934184811a47"></div>
           </div>
 
-          <div class="rock bokeh-plottt" style="display:none">
+          <div class="rock bokeh-plottt center-plot" style="display:none">
             <div class="bk-plotdiv" id="92d5f11a-a2b5-4425-8c56-8e03be537b40"></div>
           </div>
 
-          <div class="world bokeh-plottt" style="display:none">
+          <div class="world bokeh-plottt center-plot" style="display:none">
             <div class="bk-plotdiv" id="ac866803-ea11-4757-9b20-5066a448b5b0"></div>
           </div>
         </div>
