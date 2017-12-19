@@ -37,27 +37,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#">Applied Data Analysis - Fall 2017</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Project
-                    <span class="sr-only">(current)</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
         </div>
     </nav>
 
@@ -80,7 +59,7 @@
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on December 12, 2017</p>
+        <p>Posted on December 19, 2017</p>
 
         <hr>
 
@@ -131,11 +110,11 @@
 
         <hr>
         <!-- Post Content -->
-        <p class="lead"><i>Million Song Dataset (MSD), a famous dataset with freely available collection of audio features and metadata for a million contemporary popular music tracks.</i></p>
+        <h2>Abstract</h2>
+        <p>Million Song Dataset (MSD), a famous dataset with freely available collection of audio features and metadata for a million contemporary popular music tracks.</p>
 
-        <p>There are many attractive features in the MSD. Here, we want to focus on the year, location and genre of a song. Based on these features, for each year, we define the most prolific types of music over time and understand their evolution.
+        <p>There are many attractive features in the MSD. Here, we want to focus on the year, location and genre of a song. Based on these features, for each year, we define the most prolific types of music over time, understand their evolution and have a look at the most popular songs and artists.
         The purpose of this project in Robert West's <em>CS-401 Applied Data Analysis (ADA)</em> class of Fall 2017 at EPFL is to show the evolution of the music genres over time and space.</p>
-
 
         <p>A subset of 10.000 songs from the dataset we used for this project is avalaible for download <a href="https://labrosa.ee.columbia.edu/millionsong/pages/getting-dataset">here</a>.</p>
         <br><br><hr>
@@ -500,7 +479,7 @@
 
 
 
-        <br><br><hr>
+        <br><br><br><hr>
         <h2>Artist familiarity and hotttnesss</h2>
 
         <br>
@@ -641,20 +620,18 @@
             <div class="bk-plotdiv" id="6eee9180-347d-4a4c-a49c-40b5a02f428d"></div>
             <br>
 
-            <p> As the hotttnesss is a measure of how much buzz the song is getting right now, it seems logical that the distribution has
+            <p class="comment"> As the hotttnesss is a measure of how much buzz the song is getting right now, it seems logical that the distribution has
               a higher pic for the recent year than the distribution for all the songs. We could have expected even smaller tails, for hotttest songs distribution.
             </p>
           </div>
 
           <div class="duration bokeh-plot center-plot" style="display:none">
 
-
-
             <div class="bk-plotdiv" id="883d6329-d94a-4283-9293-6e849e9740c2"></div>
             <div class="bk-plotdiv" id="4619d2c8-977c-4798-be36-6fd335aea5ce"></div>
             <br>
 
-            <p> Interestingly the distribution of the duration of the song on the entire dataset looks like a perfect gaussian with a mean around 4min.
+            <p class="comment"> Interestingly the distribution of the duration of the song on the entire dataset looks like a perfect gaussian with a mean around 4min.
               We could have expected a more complicated distribution with different pic or flater between 3min and 4min. The distribution
               of the 1000 hotttest songs is a bit flater betweeen 3min and 5min and has also a high pic at 4min.
 
@@ -665,7 +642,7 @@
             <div class="bk-plotdiv" id="ead5d40d-4984-4cd9-8ab7-ce4ad6b98af9"></div>
             <div class="bk-plotdiv" id="ecf34c39-d7b2-41d4-a717-972b0c17225c"></div>
             <br>
-            <p>
+            <p class="comment">
               As for the duration, for the loudness we see that the distribution on the 1000 hotttset songs subset,
               looks the same as the one on the all dataset, with smaller the tails.
 
@@ -676,7 +653,7 @@
             <div class="bk-plotdiv" id="6d2617d2-7e87-4a98-a4bc-0ab1f6e6df1d"></div>
             <div class="bk-plotdiv" id="d22249cc-7330-4703-a121-aee852ae2884"></div>
             <br>
-            <p> On the all dataset the distribution of tempo have two pics, one at 90bpm and 130bpm.
+            <p class="comment"> On the all dataset the distribution of tempo have two pics, one at 90bpm and 130bpm.
               On the 1000 hotttest songs the main pic is around 130bpm, and a smaller one appears at 165bpm which is quite high.
             <p>
 
@@ -689,7 +666,7 @@
             <div class="bk-plotdiv" id="404b94a9-0c22-45e6-8bad-509e172d753e"></div>
             <div class="bk-plotdiv" id="b4042cd5-db3f-4a49-b85b-31a70323bd70"></div>
             <br>
-            <p>
+            <p class="comment">
             As we could expect the average artist hotttnesss is higher for the 1000 hotttest songs subset.
             </p>
 
@@ -700,39 +677,37 @@
             <div class="bk-plotdiv" id="20ccac0e-bc92-4beb-bf31-61b956ae13bf"></div>
             <div class="bk-plotdiv" id="0d21410b-56e0-45bf-89b6-145f9feeb84e"></div>
             <br>
-          <p>
+          <p class="comment">
             As we saw, there is a correlation between the artist familiarity and artist hotttnesss, therefore
             it is not suprising to see that the average artist familiarirty is higher on the 1000 hotttest songs subset.
           </p>
           </div>
 
-          <div class="genre">
-            <p>Interestingly looking at the 1000 hotttest songs the proportion of  <i>Hip-Hop</i>  stay identic (7%/8%), despite
+          <div class="bokeh-plot center-plot genre">
+            <div class="bk-plotdiv" id="b65478c8-6c1c-434e-ab93-f34810d8f691"></div>
+            <div class="bk-plotdiv" id="b529ee48-2248-4c9a-b2e7-c4ec3267f1b6"></div>
+            <div class="bk-plotdiv" id="bfee38ca-c6e0-49a2-985e-c7a5d1dedc99"></div>
+
+            <br><br>
+            <p class="comment">Interestingly looking at the 1000 hotttest songs the proportion of  <i>Hip-Hop</i>  stay identic (7%/8%), despite
             we saw that this was the main genre considering 100 hotttest artists (65%/11%). This could be intrepreted
             as <i>Hip-Hop</i> artists are making more buzz with their "personality" than with their music. <i>Rock</i>
             and <i>Pop</i> music are the main genres among the 1000 hotttest song. </p>
-            <br>
-            <div class="bokeh-plot center-plot">
-                <div class="bk-plotdiv" id="b65478c8-6c1c-434e-ab93-f34810d8f691"></div>
-                <div class="bk-plotdiv" id="b529ee48-2248-4c9a-b2e7-c4ec3267f1b6"></div>
-                <div class="bk-plotdiv" id="bfee38ca-c6e0-49a2-985e-c7a5d1dedc99"></div>
-            </div>
-          </div>
+         </div>
 
 
           <hr>
         </div>
 
         <br><br>
-        <p> Apart that 1000 hotttest songs, are done by hottter and more familiar Artist.
+        <p>Apart that 1000 hotttest songs are done by hottter and more familiar Artist.
           We could not identify particularity of hotttest songs compare to the others looking at some simple features as duration, tempo, loudness....
           It could be interesting to realize a deeper research using machine learning tools to see if we can identify the hotttest songs, looking at more
           complicated features as lyrics, video-clip, structure of the song....
-
         </p>
 
-
-        <p>Conclusion</p>
+        <br><br><hr>
+        <h2>Conclusion</h2>
       </div>
       <!-- /.col -->
 

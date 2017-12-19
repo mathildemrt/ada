@@ -9,8 +9,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.title, h1, h2{
+.title, h1, h2, .card-header{
     font-family: 'Julius Sans One', sans-serif;
+}
+.comment{
+    font-family: 'Open Sans', sans-serif;
 }
 .subtitle{
    
