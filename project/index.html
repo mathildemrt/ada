@@ -393,9 +393,11 @@
         <p>The MSD contains some Additional files which provide us with all the different tags that define a song.</p>
         <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to match a maximum of those tags to a genre. And it's not a easy task to classify music genre and classify certain song.</p>
         <p>For instance the song <i>Soul Deep from The Box Tops</i> has the following tags :</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/--f55NUHGbo?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        
+        <div style="text-align:center;width:100%;">
+        <iframe align="middle" width="560" height="315" src="https://www.youtube.com/embed/--f55NUHGbo?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-        <p>
+        <p style="text-align:center;">
 
             <span class="badge badge-default" style="background-color: #e50000; color:white">blue-eyed soul</span>
             <span class="badge badge-default" style="background-color: #ff81c0; color:white">pop rock</span>
@@ -436,6 +438,7 @@
             <span class="badge badge-default" style="background-color: #eeeeee; color:black">nederland</span>
             <span class="badge badge-default" style="background-color: #eeeeee; color:black">confident</span>
         </p>
+        </div>
 
         <p> We build a dictionnary to match the maximum of those tags to a genre. Above, the color of the tags indicates its genre.
         Each tag is also associated to a certain weight, so we computed for a song the cumulative weight for each genre, and retain only the genre having the maximun cumulative weight. For instance, the previous song was classified as <span class="badge badge-default" style="background-color: #2242c7; color:white">Rock</span> as the cumulative weight were:
@@ -737,8 +740,10 @@
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
-        <div class="container">
-          <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <div class="container" style="text-align:center">
+            <p class="m-0 text-center text-white">Chamard &nbsp;&bull;&nbsp; Gallice &nbsp;&bull;&nbsp; Mareite &nbsp;&bull;&nbsp; 2017 &nbsp;&bull;&nbsp; EPFL</p>
+            <br>
+            <img align="middle" style="background-color: white" width="10%" src="img/epfl.png">
         </div>
         <!-- /.container -->
     </footer>
