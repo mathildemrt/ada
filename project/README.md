@@ -37,15 +37,11 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
 
 - [x] Access to the database from the cluster. *[Thibaut, Mathilde]*
 - [x] Start to Identificate the important metrics. *[Mathilde, Noé]*
-- [x] Differentiate genres and subgenres: - definition of genre *[Thibaut, Mathilde, Noé]*
-                                          - create the first dictionnary  subgenre/genre with beautiful soup *[Mathilde]*
-                                          - enrich the dictionnary  subgenre/genre *[Noé]*
+- [x] Differentiate genres and subgenres. Definition of genre *[Thibaut, Mathilde, Noé]*. Create the first dictionnary  subgenre/genre with beautiful soup *[Mathilde]*. Enrich the dictionnary  subgenre/genre *[Noé]*.
 
 #### Week 2 (14 Nov)
 
-- [x] Create our dataframe with the identified metric:
-                                                       - `get_genre()`, `create_data_frame()`  functions *[Noé]*
-                                                       - `get_location()`function *[Thibaut]*
+- [x] Create our dataframe with the identified metric. `get_genre()`, `create_data_frame()`  functions *[Noé]*. `get_location()`function *[Thibaut]*
 
 
 #### Week 3 (21 Nov)
@@ -91,6 +87,7 @@ During this milestone we will focus our work on 3 tasks:
 - Identidy genre those are up and coming, getting buzz or fading away...
 
 
+## Final presentation & poster *[Thibaut, Mathilde, Noé]*
 
 ## Questions for TAs
 
