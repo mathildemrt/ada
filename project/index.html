@@ -132,18 +132,17 @@
 
         <hr>
         <!-- Post Content -->
-        <p class="lead">Million Song Dataset (MSD), a famous dataset with freely available collection of audio features and metadata for a million contemporary popular music tracks.</p>
+        <p class="lead"><i>Million Song Dataset (MSD), a famous dataset with freely available collection of audio features and metadata for a million contemporary popular music tracks.</i></p>
 
-        <p>There are many attractive features in the MSD. Here, what we want to focus are the year, location and genre of a song. Based on these features, for each year, we define the most prolific types of music over time and understand their evolution.
+        <p>There are many attractive features in the MSD. Here, we want to focus on the year, location and genre of a song. Based on these features, for each year, we define the most prolific types of music over time and understand their evolution.
         The purpose of this project in Robert West's <em>CS-401 Applied Data Analysis (ADA)</em> class of Fall 2017 at EPFL is to show the evolution of the music genres over time and space.</p>
 
         <p>A subset of 10.000 songs from the dataset we used for this project is avalaible for download <a href="https://labrosa.ee.columbia.edu/millionsong/pages/getting-dataset">here</a>.</p>
-
-
-
-        <br><br>
-        <hr>
+        <br><hr>
+          
+          
         <h2>What are the main music genres ?</h2>
+          
         <p>Since our general task is to model the genre of a the songs, we decided to classify every music under one of those genre :</p>
         <img class="img-fluid" src="img/legend.png" alt="legend" />
 
@@ -161,41 +160,78 @@
             <li>Raggae</li>
             <li>World</li>
           </ul>
-
-
-
-
-        <br><br>
-        <hr>
+        <br><br><hr>
+          
+          
         <h2>Dataset description</h2>
 
-        <p>The songs here are mostly ranging from 1920 to 2010, with a peak in the year 2000s.</p>
-        <p>The entire dataset is 280GB, so we used the cluster to work on it. The MSD contains some Additional files which provide us with all the different tags that could define a song.</p>
-        <p>For instance the song xxx has the following tags :</p>
-        <video src="" ></video>
-        <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to define what is a genre and a subgenre. And try to macth all those tags to a genre. And it's not a easy task to classify music genre and classify certain song.</p>
-
-        <br><br>
-        <img class="img-fluid rounded" src="img/yeardistribution.png" alt="Year distribution"/>
-        <p>We notice that the number of the songs starts to increase significantly in the 1980s, likely coinciding with the invention of the CD. CD sales began declining in 2000 due to the increasing popularity of a new digital format known as the MP3.</p>
-
+        <p>The entire dataset is 280GB, but since for some of the songs the information on the year is missing, we have limited the number of songs of our study to about 162 000 songs in our final dataframe.</p>
         <div class="bk-root center-plot">
           <div class="bk-plotdiv" id="03649ad4-c667-4f3b-8c8a-9c131c02ef8a"></div>
-
-
         </div>
 
         <div class="bk-root center-plot">
           <div class="bk-plotdiv" id="f1beff7f-17c4-4d20-8d6a-6cc825df62a3"></div>
           <div class="bk-plotdiv" id="b53fe81b-9e0b-4022-9592-5369692b15f4"></div>
         </div>
-
-
-
+          
+        <p>The dataset contains songs mostly <b>ranging from 1920 to 2010</b>, with a peak in the year 2000s.</p>
+        <img class="img-fluid rounded" src="img/yeardistribution.png" alt="Year distribution"/>
+        <p>We notice that the number of the songs starts to increase significantly in the 1980s, likely coinciding with the invention of the CD. CD sales began declining in 2000 due to the increasing popularity of a new digital format known as the MP3.</p>
+          
+      
+        <p>The MSD contains some Additional files which provide us with all the different tags that could define a song.</p>
+        <p>For instance the song <i>Soul Deep from The Box Tops</i> has the following tags :</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/--f55NUHGbo?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        
+        <p>
+            <span class="badge badge-info">blue-eyed soul</span>
+            <span class="badge badge-info">pop rock</span>
+            <span class="badge badge-info">blues-rock</span>
+            <span class="badge badge-info">beach music</span>
+            <span class="badge badge-info">soft rock</span>
+            <span class="badge badge-info">soul</span>
+            <span class="badge badge-info">classic rock</span>
+            <span class="badge badge-info">oldies</span>
+            <span class="badge badge-info">power pop</span>
+            <span class="badge badge-info">psychedelic rock</span>
+            <span class="badge badge-info">rock</span>
+            <span class="badge badge-info">sunshine pop</span>
+            <span class="badge badge-info">blues</span>
+            <span class="badge badge-info">singer-songwriter</span>
+            <span class="badge badge-info">pop</span>
+            <span class="badge badge-info">male vocalist</span>
+            <span class="badge badge-info">united states</span>
+            <span class="badge badge-info">rock 'n roll</span>
+            <span class="badge badge-info">am pop</span>
+            <span class="badge badge-info">r&b</span>
+            <span class="badge badge-info">american</span>
+            <span class="badge badge-info">male</span>
+            <span class="badge badge-info">psychedelic</span>
+            <span class="badge badge-info">classic</span>
+            <span class="badge badge-info">vocal</span>
+            <span class="badge badge-info">americana</span>
+            <span class="badge badge-info">game music</span>
+            <span class="badge badge-info">mod</span>
+            <span class="badge badge-info">trippy</span>
+            <span class="badge badge-info">60s</span>
+            <span class="badge badge-info">french</span>
+            <span class="badge badge-info">germany</span>
+            <span class="badge badge-info">canada</span>
+            <span class="badge badge-info">70s</span>
+            <span class="badge badge-info">belgium</span>
+            <span class="badge badge-info">cover</span>
+            <span class="badge badge-info">nederland</span>
+            <span class="badge badge-info">confident</span>
+        </p> 
+          
+        <p> Those tags will be useful to define the genre of the song. That's why the first part of our work was to match a maximum of those tags to a genre. And it's not a easy task to classify music genre and classify certain song.</p>
+        <p>We noticed that the genre is often define by the last word of the tag, in case of a tag composed by multiple words. For instance <span class="badge badge-info">blue-eyed soul</span> would be classified as soul, <span class="badge badge-info">psychedelic rock</span> as rock and  <span class="badge badge-info">power pop</span> as pop.<br>
+        Each tag is associated to a certain weight, so we decided to sum the weight of every genre and retain only the genre having the maximun weight as the genre of the song.</p>
         <hr>
         <h2>Evolution of music genres over time</h2>
         <img class="img-fluid" src="img/year.png" alt="evolution of music genres over time" />
-        <p>The graph below shows the evolution and development of certain music genres over time. It states that Jazz and Blues are loosing popularity over time wheras electronic music which was completly new in the 1980's is becoming more and more popular. We can clearly see the creation of metal music in  the early 1970s</p>
+        <p>The graph below shows the evolution and development of certain music genres over time. It clearly show that rock music is the most popular music genre especially in the 80's. It states that Jazz and Blues are loosing popularity over time wheras electronic music which was completly new in the 1980's is becoming more and more popular. We can clearly see the creation of metal music in  the early 1970s</p>
 
 
         <hr>
@@ -445,8 +481,7 @@
             <p>Interestingly looking at the 1000 hotttest songs the proportion of  <i>Hip-Hop</i>  stay identic (7%/8%), despite
             we saw that this was the main genre considering 100 hotttest artists (65%/11%). This could be intrepreted
             as <i>Hip-Hop</i> artists are making more buzz with their "personality" than with their music. <i>Rock</i>
-            and <i>Pop<i\> music are the main genres among the 1000 hotttest song.
-          </p>
+                and <i>Pop</i> music are the main genres among the 1000 hotttest song.</p>
             <div class="bk-plotdiv" id="b65478c8-6c1c-434e-ab93-f34810d8f691"></div>
             <div class="bk-plotdiv" id="b529ee48-2248-4c9a-b2e7-c4ec3267f1b6"></div>
             <div class="bk-plotdiv" id="bfee38ca-c6e0-49a2-985e-c7a5d1dedc99"></div>
@@ -463,16 +498,6 @@
           complicated features as lyrics, video-clip, structure of the song....
 
         </p>
-
-
-        <hr>
-        <blockquote class="blockquote">
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer class="blockquote-footer">Someone famous in
-            <cite title="Source Title">Source Title</cite>
-          </footer>
-        </blockquote>
-
 
 
         <p>Conclusion</p>
