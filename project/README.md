@@ -1,4 +1,4 @@
-# Musical genre evolution
+#  Evolution of music genres
 
 ***"When the words fail, music speaks"**, Hans Christian Andersen*
 
@@ -35,22 +35,23 @@ We want to use the [Million song](https://labrosa.ee.columbia.edu/millionsong/) 
 
  #### Week 1 (7 Nov)
 
-- [ ] Access to the database from the cluster.
-- [x] Start to Identificate the important metrics.
-- [x] Differentiate genres and subgenres.
+- [x] Access to the database from the cluster. *[Thibaut, Mathilde]*
+- [x] Start to Identificate the important metrics. *[Mathilde, Noé]*
+- [x] Differentiate genres and subgenres. Definition of genre *[Thibaut, Mathilde, Noé]*. Create the first dictionnary  subgenre/genre with beautiful soup *[Mathilde]*. Enrich the dictionnary  subgenre/genre *[Noé]*.
 
 #### Week 2 (14 Nov)
 
-- [x] Create our dataframe with the identified metric.
+- [x] Create our dataframe with the identified metric. `get_genre()`, `create_data_frame()`  functions *[Noé]*. `get_location()`function *[Thibaut]*
+
 
 #### Week 3 (21 Nov)
 
-- [x] Start the *music genre* classification
+- [x] Start the *music genre* analysis *[Thibaut,Mathilde,Noé]*
 
 #### Week 4 (28 Nov)
 
-- [x] Analyze the most prolific types of music over time 
-- [x] Analyze the data, find a way to represent the important feature of each *music genre* and visualize the difference between the different *music type*
+- [x] Analyze the most prolific types of music over time *[Thibaut, Mathilde, Noé]*
+- [x] Analyze the data, find a way to represent the important feature of each *music genre* and visualize the difference between the different *music type* *[Thibaut, Mathilde, Noé]*
 
 ### A list of internal milestones up until project milestone 3
 
@@ -60,28 +61,30 @@ During this milestone we will focus our work on 3 tasks:
 - create a data story
 
 #### Week 5 ( 5 Dec)
-- Create our dataframe with the entire dataset
-- Start Visualisation function on the subset
+- [x] Create our dataframe with the entire dataset *[Thibaut, Mathilde]*
+- [x] Start Visualisation function on the subset *[Thibaut, Mathilde, Noé]*
 
 #### Week 6 ( 12 Dec) 
-- Finish the visualizations
-- Do the analysis
-- Start the data story
+- [x] Finish the visualizations : - World heat map *[Thibaut, Mathilde]*
+                                  - Music timeline *[Noé]*
+                                  - Artist familiarity and hotttnesss analysis + bokeh plots *[Noé]*
+                                  
+- [x] Do the analysis *[Thibaut, Mathilde, Noé]*
+- [x] Start the data story *[Mathilde]*
 
 #### Week 7 ( 19 Dec) 
-- Finish the data story
+- Finish the data story *[Thibaut, Mathilde, Noé]*
 
 
 ## Visualizations
 
-#### Music genre analysis
-- Display what define a music genre
-- Draw robot portraits of musical genres
 #### Music genre evolution over time and location
 - Display a music genre propagation over time on an interactive map
 - Display the music genres production over time
 
-
+### Music genre analysis:
+- look at the most familiar, and hotttest Artist, most hotttest songs according to different feature.
+- Identidy genre those are up and coming, getting buzz or fading away...
 
 ## Questions for TAs
 
@@ -93,3 +96,4 @@ For Week 4:
 - Is there a common way to represent the result of a classifictation with many feature? Do you have some advice do that?  
 
 
+## Final presentation & poster *[Thibaut, Mathilde, Noé]*
