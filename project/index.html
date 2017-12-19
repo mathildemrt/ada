@@ -144,11 +144,22 @@
         <br><br>
         <hr>
         <h2>What are the main music genres ?</h2>
-        <p>Since our general task is to model the genre of a the songs, we decided to classify every music under one of those genre :</p>
+        <p>
+          Music comes in many different types and styles ranging from traditional rock music to world pop, easy listening and bluegrass.
+          Many genres have a rich history or geographical significance, a cult following or music roots that go far beyond the 20th century.
+          In order to model the genre of a song, we defined a list of the 12 most popular genres:
+        </p>
         <img class="img-fluid" src="img/legend.png" alt="legend" />
+        <p>
+          We have drawn up this list based on our research, but obviously this list is strongly debatable.
+          We also classified a list of subgenres related to every genre which included some tough decisions and long debats.
+          In no case, we want to offend or hurt someone with this list but until the end of the article we will assume that a genre is defined according to this list.
+          You can click on a genre to see his subgenres:
+          </p>
         <div class="row">
           <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">
+              <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Genres</a>
               <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-blues" role="tab" aria-controls="Blues">Blues</a>
               <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-country" role="tab" aria-controls="profile">Country</a>
               <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-electronica" role="tab" aria-controls="messages">Electronica</a>
@@ -166,6 +177,7 @@
           <div class="col-8">
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="list-blues" role="tabpanel" aria-labelledby="list-home-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
                 <li class="list-group-item">blues</li>
                 <li class="list-group-item">blues rock</li>
@@ -182,6 +194,7 @@
               </ul>
               </div>
               <div class="tab-pane fade" id="list-country" role="tabpanel" aria-labelledby="list-profile-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
                 <li class="list-group-item">bluegrass</li>
                 <li class="list-group-item">country</li>
@@ -196,7 +209,7 @@
               </div>
               <div class="tab-pane fade" id="list-electronica" role="tabpanel" aria-labelledby="list-messages-list">
                 <ul class="list-group">
-
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <li class="list-group-item">ambient</li>
                 <li class="list-group-item">dubstep</li>
                 <li class="list-group-item">electronica</li>
@@ -207,8 +220,8 @@
               </ul>
               </div>
               <div class="tab-pane fade" id="list-folk" role="tabpanel" aria-labelledby="list-settings-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
-
                 <li class="list-group-item">american roots</li>
                 <li class="list-group-item">folk</li>
                 <li class="list-group-item">folk pop</li>
@@ -217,6 +230,7 @@
               </ul>
               </div>
               <div class="tab-pane fade" id="list-hiphop" role="tabpanel" aria-labelledby="list-settings-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
 
                 <li class="list-group-item">alternative hiphop</li>
@@ -230,6 +244,7 @@
               </ul>
               </div>
               <div class="tab-pane fade" id="list-jazz" role="tabpanel" aria-labelledby="list-settings-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
 
                 <li class="list-group-item">acid jazz</li><li class="list-group-item">bebop</li><li class="list-group-item">big band</li><li class="list-group-item">jazz</li><li class="list-group-item">jazz funk</li><li class="list-group-item">jazz fusion</li>
@@ -239,6 +254,7 @@
               </ul>
               </div>
               <div class="tab-pane fade" id="list-metal" role="tabpanel" aria-labelledby="list-settings-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
 
                 <li class="list-group-item">avant garde metal</li>
@@ -267,6 +283,7 @@
               </ul>
               </div>
               <div class="tab-pane fade" id="list-orchestral" role="tabpanel" aria-labelledby="list-settings-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
 
                 <li class="list-group-item">broadway</li>
@@ -278,6 +295,7 @@
               </ul>
               </div>
               <div class="tab-pane fade" id="list-pop" role="tabpanel" aria-labelledby="list-settings-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
 
                 <li class="list-group-item">adult contemporary</li>
@@ -296,6 +314,7 @@
               </ul>
               </div>
               <div class="tab-pane fade" id="list-reggae" role="tabpanel" aria-labelledby="list-settings-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
 
                 <li class="list-group-item">dancehall</li>
@@ -306,6 +325,7 @@
               </ul>
               </div>
               <div class="tab-pane fade" id="list-rock" role="tabpanel" aria-labelledby="list-settings-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
 
                 <li class="list-group-item">alternative</li>
@@ -331,6 +351,7 @@
               </ul>
               </div>
               <div class="tab-pane fade" id="list-world" role="tabpanel" aria-labelledby="list-settings-list">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Subgenres</a>
                 <ul class="list-group">
 
                 <li class="list-group-item">african</li>
@@ -368,6 +389,8 @@
           certain song.</p>
 
         <br><br>
+        <!--Year distribution anchor-->
+        <a id="year_distribution"></a>
         <img class="img-fluid rounded" src="img/yeardistribution.png" alt="Year distribution" />
         <p>We notice that the number of the songs starts to increase significantly in the 1980s, likely coinciding with the invention of the CD. CD sales began declining in 2000 due to the increasing popularity of a new digital format known as the MP3.</p>
 
@@ -385,17 +408,32 @@
         <hr>
         <h2>Evolution of music genres over time</h2>
         <img class="img-fluid" src="img/year.png" alt="evolution of music genres over time" />
-        <p>The graph below shows the evolution and development of certain music genres over time. It states that Jazz and Blues are loosing popularity over time wheras electronic music which was completly new in the 1980's is becoming more and more popular.
-          We can clearly see the creation of metal music in the early 1970s</p>
+        <p>
+          The graph below shows the evolution and development of certain music genres over time.
+          It states that Jazz and Blues are loosing popularity over time wheras electronic music which was completly new in the 1980's is becoming more and more popular.
+          Even if everybody knows that the Rock n Roll will never die, it is interesting to see that his popularity pick happened in the 1980s.
+          We can clearly see the creation of metal music in the early 1970s.
+        </p>
 
 
         <hr>
         <h2>Evolution of music genres over time and space</h2>
-        <p>Show the most popular genre in a certain region at a given year.</p>
+        <p>
+          The maps below show where the artists are from on a heatmap for a genre over time and space.
+          For instance, we can see that the rock music started to grow in the US and then in the UK before to flood the music market all over the world.
+          However, those maps are quite biased by our dataset.
+          Indeed the <a href="#year_distribution">year distribution</a> shows that we have way more recent music.
+          So obviously, the heatmap gives the feeling that the every genre is growing over the time.
+          In fact it just shows that music production is way more important now.
+          We can explain that becquse nowaday it is easier to record a song and a huge part of our society is based on entertainement.
+          We thing that the main information we can learn from those maps, is the music genre globalization.
+          Indeed we can see that popular regional genre, like Reggea, inspires new artists all over the world.
+          If a genre has a regional root, it often become world wide.
+        </p>
 
 
         <select id="genre" onchange="udpateHeatMap(this);" value="Genre : ">
-          <option value="blues" selected>Blues</option>
+          <option value="blues">Blues</option>
           <option value="country">Country</option>
           <option value="electronica">Electronica</option>
           <option value="folk">Folk</option>
@@ -404,8 +442,8 @@
           <option value="metal">Metal</option>
           <option value="orchestral">Orchestral</option>
           <option value="pop">Pop</option>
-          <option value="raggae">Raggae</option>
-          <option value="rock">Rock</option>
+          <option value="reggae">Reggae</option>
+          <option value="rock" selected>Rock</option>
           <option value="world">World</option>
         </select>
         <br><br>
